@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			$name = test_input($_POST["name"]);
 	}
 	if (empty(test_input($_POST["password"]))) {
-		$passwordErr = "Entrer Password"
+		$passwordErr = "Entrer Password";
 		
 		 }else {
 			$password = test_input($_POST["password"]);
