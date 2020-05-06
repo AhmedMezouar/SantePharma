@@ -87,13 +87,13 @@ CREATE TABLE `medicament` (
 -- Structure de la table `offre_travail`
 --
 
-CREATE TABLE  offre_travail   (
-Email VARCHAR (10)  CONSTRAINT  pk_article  PRIMERY KEY,
-name VARCHAR (30)  NOT NULL,
-birthday DATE,
-phonenumber NUMBER (10),
-specialite VARCHAR(30),
-commentaire VARCHAR(200)
+CREATE TABLE  'offre_travail'   (
+'email' VARCHAR (10)  NOT NULL,
+'name' VARCHAR (30)  NOT NULL,
+'birthday' DATE NOT NULL,
+'phonenumber' NUMBER (10) NOT NULL,
+'specialite' VARCHAR(30) NOT NULL,
+'commentaire' VARCHAR(200)  NOT NULL
 ) ; ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -204,7 +204,7 @@ ALTER TABLE `medicament`
 -- Index pour la table `offre_travail`
 --
 ALTER TABLE `offre_travail`
-  ADD PRIMARY KEY (`id_de_off`);
+  ADD PRIMARY KEY (`email`);
 
 --
 -- Index pour la table `pharmacien`
