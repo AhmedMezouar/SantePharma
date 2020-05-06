@@ -87,10 +87,14 @@ CREATE TABLE `medicament` (
 -- Structure de la table `offre_travail`
 --
 
-CREATE TABLE `offre_travail` (
-  `id_de_off` varchar(25) NOT NULL,
-  `nom_de_off` varchar(25) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE  offre_travail   (
+Email VARCHAR (10)  CONSTRAINT  pk_article  PRIMERY KEY,
+name VARCHAR (30)  NOT NULL,
+birthday DATE,
+phonenumber NUMBER (10),
+specialite VARCHAR(30),
+commentaire VARCHAR(200)
+) ; ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
