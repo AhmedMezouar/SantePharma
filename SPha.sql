@@ -84,10 +84,10 @@ CREATE TABLE `medicament` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `offre_travail`
+-- Structure de la table `postuler`
 --
 
-CREATE TABLE  'offre_travail'   (
+CREATE TABLE  'postuler'   (
 'email' VARCHAR (10)  NOT NULL,
 'name' VARCHAR (30)  NOT NULL,
 'birthday' DATE NOT NULL,
@@ -114,7 +114,7 @@ CREATE TABLE `pharmacien` (
 -- Structure de la table `postuler`
 --
 
-CREATE TABLE `postuler` (
+CREATE TABLE `offre_travail` (
   `matri_cond` varchar(25) NOT NULL,
   `id_de off` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -203,7 +203,7 @@ ALTER TABLE `medicament`
 --
 -- Index pour la table `offre_travail`
 --
-ALTER TABLE `offre_travail`
+ALTER TABLE `postuler`
   ADD PRIMARY KEY (`email`);
 
 --
@@ -215,7 +215,7 @@ ALTER TABLE `pharmacien`
 --
 -- Index pour la table `postuler`
 --
-ALTER TABLE `postuler`
+ALTER TABLE `offre_travail`
   ADD PRIMARY KEY (`matri_cond`,`id_de off`);
 COMMIT;
 
