@@ -1,16 +1,54 @@
-<?php
-session_start();
-if(isset($_POST['username']) && isset($_POST['password']))
-{
-    // connexion à la base de données
-    $db_username = 'root';
-    $db_password = 'mot_de_passe_bdd';
-    $db_name     = 'nom_bdd';
-    $db_host     = 'localhost';
-    $db = mysqli_connect($db_host, $db_username, $db_password,$db_name)
-           or die('could not connect to database');
+
+<?php 
+ session_start();
+$servername = 'localhost';
+$username = 'root';
+$password = '';
+$bdname = 'santepharma';
+
+
+$conn = mysqli_connect($servername,$username,$password,$bdname);
+if(isset($_POST["connect_btn"])){
     
-    // on applique les deux fonctions mysqli_real_escape_string et htmlspecialchars
-    // pour éliminer toute attaque de type injection SQL et XSS
-    $username = mysqli_real_escape_string($db,htmlspecialchars($_POST['username'])); 
-    $password = mysqli_real_escape_string($db,htmlspecialchars($_POST[
+    $email=$_POST["email"];
+    $password=$_POST["password"];
+    
+    $sql = "SELECT * FROM login WHERE email = '{$email}'' and password = '{$password}'" ;
+            
+    $result = mysqli_query($conn,$sql);
+    if($result){
+        $row = mysqli_fetch_assoc($result);
+        $_SESSION["session_login"]= $row["email"];
+        //echo"vous etes connecte";
+        header("location:register.php");
+    }
+    else{
+        echo "votre email ou mot de passe incorrects";
+    }
+    
+}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title> login</title>
+</head>
+<body>
+	<div class="header">
+		<h1> login </h1>
+	</div>
+	<form method="post" action="">
+		<table>
+			<tr>
+				<td>
+					Email:</td>
+				<td><input type="text" name="email" class="textInput"></td></tr>
+				<tr><td>Password:</td>
+					<td><input type="text" name="password" class="textInput"></td></tr>
+					
+						<tr><td></td>
+						<td><input type="submit" name="connect_btn" value="connect"></td></tr>
+		</table>
+	</form>
+</body>
+</html>
