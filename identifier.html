@@ -1,3 +1,37 @@
+<?php 
+//session_star();
+//connect to database
+$db = mysqli_connect("localhost", "root", "" ,"login");
+if (isset($_POST['register_btn']))
+{
+	$nom=$_POST['nom'];
+	$prenom=$_POST['prenom'];
+	$email=$_POST['email'];
+	$password=$_POST['password']; 
+	$date=$_POST['date'];
+	$sexe=$_POST['sexe']; 
+	$numAgre=$_POST['numAgre']; 
+	$numTel=$_POST['numTel'];
+     $PhaMed=$_POST['specialte'];
+	$addres=$_POST['addres'];
+	$region=$_POST['region'];
+	$wilaya=$_POST['wilaya'];
+     
+	//if($password != NULL) {
+	//create user
+	$password =md5 ($password); // hash password before storing for security purposes
+	$sql = "INSERT INTO user(nom, prenom, email, password, date, numAgre, numTel, sexe, specialte,addres, region, wilaya) VALUES ('$nom', '$prenom', '$email', '$password', '$date', '$numAgre', '$numTel', '$sexe', '$PhaMed','$addres', '$region', '$wilaya')";
+	mysqli_query($db, $sql);
+	$_SESSION ['message'] = "You are now logged in";
+	$_SESSION ['nom'] = $nom;
+	header ("location: medicament.html");//redirect to home page
+	/*
+}else{
+$_SESSION['message'] = "the two passwords do not match";
+
+} */
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,6 +90,24 @@
 
 
      <!-- MENU -->
+     <?php
+                        if(@$_GET['Empty']==true)
+                        {
+                    ?>
+                        <div class="alert-light text-danger text-center py-3"><?php echo $_GET['Empty'] ?></div>                                
+                    <?php
+                        }
+                    ?>
+ 
+ 
+                    <?php
+                        if(@$_GET['Invalid']==true)
+                        {
+                    ?>
+                        <div class="alert-light text-danger text-center py-3"><?php echo $_GET['Invalid'] ?></div>                                
+                    <?php
+                        }
+                    ?>
      <section class="navbar navbar-default navbar-static-top" role="navigation">
           <div class="container">
 
@@ -92,32 +144,33 @@
         <h2>Identification</h2>
         <section id="sign">
              <div class="wow fadeInUp" data-wow-delay="0.8s">
-                <form>
+                <form action="process.php" method="post">
                   <div class="form-group">
                     <label for="exampleInputEmail1"> Address Email</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entre email">
+                    <input type="email" class="form-control mb-3" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entre email" name=email >
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Mot De Passe</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mot de passe">
-                    <small id="emailHelp" class="form-text text-muted">Nous ne partagerons jamais votre e-mail avec quelqu'un d'autre.</small>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mot de passe" name=Password>
+               <!--     <small id="emailHelp" class="form-text text-muted"  >Nous ne partagerons jamais votre e-mail avec quelqu'un d'autre.</small> -->
                   </div>
-                  <button type="submit" class="btn btn-primary" name="submit">Connecter</button>
+                  <button type="submit" class="btn btn-primary" name="connect">Connecter</button>
                 </form>
             </div>
         </section>
       </div>
-    <div class="col-sm-8">
+    <div class="col-sm-8"  method="post" action="register.php">
         <h2>Crée un Compte</h2>
-            <section id="sign">
+            <section id="sign" method="post" action="register.php">
+				<form method="post" action="register.php">
                 <div class="wow fadeInUp" data-wow-delay="0.8s">
                                    <div class="col-md-6 col-sm-6">
                                         <label for="name">Nom</label>
-                                        <input type="text" class="form-control" id="name" name="name" placeholder="Nom">
+                                        <input type="text" class="form-control" id="name" name="nom" placeholder="Nom">
                                    </div>
                                    <div class="col-md-6 col-sm-6">
                                         <label for="name">Prénom</label>
-                                        <input type="text" class="form-control" id="name" name="name" placeholder="Prénom">
+                                        <input type="text" class="form-control" id="name" name="prenom" placeholder="Prénom">
                                    </div>
 
                                    <div class="col-md-6 col-sm-6">
@@ -126,7 +179,7 @@
                                    </div>
                                    <div class="col-md-6 col-sm-6">
                                         <label for="name">Mot de Passe </label>
-                                        <input type="password" class="form-control" id="name" name="name" placeholder="Mot de Passe">
+                                        <input type="password" class="form-control" id="name" name="password" placeholder="Mot de Passe">
                                    </div>
                                    <div class="col-md-6 col-sm-6">
                                         <label for="date">Date de Naissance</label>
@@ -135,16 +188,28 @@
 
                                    <div class="col-md-6 col-sm-6">
                                         <label for="select">Séléctionner votre Spécialité</label>
-                                        <select class="form-control">
-                                             <option>Pharmacie </option>
-                                             <option>Médecin </option>
+                                        <select class="form-control" name="specialte">
+                                             <option value="Pharmacie">Pharmacie </option>
+                                             <option value="Medecin">Médecin </option>
                                         </select>
                                    </div>
                                    <div class="col-md-12 col-sm-12">
+                                        <label for="telephone">Adresse complète</label>
+                                        <input type="text" class="form-control" name="addres" placeholder="Adresse complète">
+                                   </div>
+                                   <div class="col-md-4 col-sm-4">
+                                        <label for="telephone">Région</label>
+                                        <input type="text" class="form-control" name="region" placeholder="Région ( Daira )">
+                                   </div>
+                                   <div class="col-md-4 col-sm-4">
+                                        <label for="telephone">Wilaya</label>
+                                        <input type="text" class="form-control" name="wilaya" placeholder="Wilaya ..">
+                                   </div>
+                                   <div class="col-md-4 col-sm-4">
                                         <label for="select"> Sexe </label>
-                                        <select class="form-control">
-                                             <option>Homme </option>
-                                             <option>Femme </option>
+                                        <select class="form-control" name="sexe">
+                                             <option value="homme">Homme </option>
+                                             <option value="femme">Femme </option>
                                         </select>
                                    </div>
                                    <div class="form-group col-md-6">
@@ -211,18 +276,19 @@
                                    
                                    <div class="col-md-12 col-sm-12">
                                         <label for="telephone">Némuro D'agrément</label>
-                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Numéro d'agrément">
+                                        <input type="tel" class="form-control" id="phone" name="numAgre" placeholder="Numéro d'agrément">
                                    </div>
                                    <div class="col-md-12 col-sm-12">
                                         <label for="telephone">Némuro Téléphone</label>
-                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Némuro De Téléphone ">
+                                        <input type="tel" class="form-control" id="phone" name="numTel" placeholder="Némuro De Téléphone ">
                                     <div class="form-group form-check">
                                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                         <label class="form-check-label" for="exampleCheck1">J'accepte les termes et conditions pour m'inscrire à ce service.</label>
-                                       </div>
-                                       <button type="submit" class="btn btn-primary" name="submit">S'inscrire</button>
+									   </div>
+                                       <button type="submit" class="btn btn-primary" name="register_btn" value="Register" >S'inscrire</button>
                                    </div>
-                </div>
+				</div>
+				</form>
     </section>
       </div>
   </div>
