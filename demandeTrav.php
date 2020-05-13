@@ -1,3 +1,15 @@
+<?php 
+$dbServername = mysqli_connect("localhost");
+$dbUsername = "root";
+$dbname = "postuler";
+
+	$name = mysql_real_escape_string($_POST['name']);
+	$email = mysql_real_escape_string($_POST['email']);
+	$phonenumber = mysql_real_escape_int($_POST['phonenumber']);
+	$birthday = mysql_real_escape_int($_POST['birthday']);
+	$specialite = mysql_real_escape_string($_POST['specialite']);
+	$commentaire = mysql_real_escape_string($_POST['commentaire']);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
