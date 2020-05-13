@@ -12,11 +12,15 @@ if (isset($_POST['register_btn']))
 	$sexe=$_POST['sexe']; 
 	$numAgre=$_POST['numAgre']; 
 	$numTel=$_POST['numTel'];
-	$PhaMed=$_POST['specialte'];
+     $PhaMed=$_POST['specialte'];
+	$addres=$_POST['addres'];
+	$region=$_POST['region'];
+	$wilaya=$_POST['wilaya'];
+     
 	//if($password != NULL) {
 	//create user
 	$password =md5 ($password); // hash password before storing for security purposes
-	$sql = "INSERT INTO user(nom, prenom, email, password, date, numAgre, numTel, sexe, specialte) VALUES ('$nom', '$prenom', '$email', '$password', '$date', '$numAgre', '$numTel', '$sexe', '$PhaMed')";
+	$sql = "INSERT INTO user(nom, prenom, email, password, date, numAgre, numTel, sexe, specialte,addres, region, wilaya) VALUES ('$nom', '$prenom', '$email', '$password', '$date', '$numAgre', '$numTel', '$sexe', '$PhaMed','$addres', '$region', '$wilaya')";
 	mysqli_query($db, $sql);
 	$_SESSION ['message'] = "You are now logged in";
 	$_SESSION ['nom'] = $nom;
@@ -190,6 +194,18 @@ $_SESSION['message'] = "the two passwords do not match";
                                         </select>
                                    </div>
                                    <div class="col-md-12 col-sm-12">
+                                        <label for="telephone">Adresse complète</label>
+                                        <input type="text" class="form-control" name="addres" placeholder="Adresse complète">
+                                   </div>
+                                   <div class="col-md-4 col-sm-4">
+                                        <label for="telephone">Région</label>
+                                        <input type="text" class="form-control" name="region" placeholder="Région ( Daira )">
+                                   </div>
+                                   <div class="col-md-4 col-sm-4">
+                                        <label for="telephone">Wilaya</label>
+                                        <input type="text" class="form-control" name="wilaya" placeholder="Wilaya ..">
+                                   </div>
+                                   <div class="col-md-4 col-sm-4">
                                         <label for="select"> Sexe </label>
                                         <select class="form-control" name="sexe">
                                              <option value="homme">Homme </option>
