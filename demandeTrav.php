@@ -13,15 +13,15 @@ if (isset($_POST['apply_btn']))
 	$commentaire = mysql_real_escape_string($_POST['commentaire']);
 
 	if(isset($_POST['submit']))
-    {
+		{
+		
        if(empty($_POST['email']) || empty($_POST['name'] || empty($_POST['phonenumber'] || empty($_POST['birthday'] || empty($_POST['specialite'] || empty($_POST['commentaire']))
        {
             header("location:apply.php?Empty= Please Fill in the Blanks");
        }
     $sql = "INSERT INTO postuler(name, email, phonenumber,birthday, specialte, commentaire) VALUES ('$name', '$email', '$phonenumber', '$birthday', '$specialite', '$commentaire')";
 	mysqli_query($db, $sql);
-	$_SESSION ['message'] = "Votre demande a bien été transmise";
-	header ("location: medicament.html");
+	$_SESSION ['message'] = "Votre demande a bien été transmise";}
 }
 ?>
 <!DOCTYPE html>
