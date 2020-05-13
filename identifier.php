@@ -86,6 +86,24 @@ $_SESSION['message'] = "the two passwords do not match";
 
 
      <!-- MENU -->
+     <?php
+                        if(@$_GET['Empty']==true)
+                        {
+                    ?>
+                        <div class="alert-light text-danger text-center py-3"><?php echo $_GET['Empty'] ?></div>                                
+                    <?php
+                        }
+                    ?>
+ 
+ 
+                    <?php
+                        if(@$_GET['Invalid']==true)
+                        {
+                    ?>
+                        <div class="alert-light text-danger text-center py-3"><?php echo $_GET['Invalid'] ?></div>                                
+                    <?php
+                        }
+                    ?>
      <section class="navbar navbar-default navbar-static-top" role="navigation">
           <div class="container">
 
@@ -122,17 +140,17 @@ $_SESSION['message'] = "the two passwords do not match";
         <h2>Identification</h2>
         <section id="sign">
              <div class="wow fadeInUp" data-wow-delay="0.8s">
-                <form>
+                <form action="process.php" method="post">
                   <div class="form-group">
                     <label for="exampleInputEmail1"> Address Email</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entre email">
+                    <input type="email" class="form-control mb-3" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entre email" name=email >
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Mot De Passe</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mot de passe">
-                    <small id="emailHelp" class="form-text text-muted">Nous ne partagerons jamais votre e-mail avec quelqu'un d'autre.</small>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mot de passe" name=Password>
+               <!--     <small id="emailHelp" class="form-text text-muted"  >Nous ne partagerons jamais votre e-mail avec quelqu'un d'autre.</small> -->
                   </div>
-                  <button type="submit" class="btn btn-primary" name="submit">Connecter</button>
+                  <button type="submit" class="btn btn-primary" name="connect">Connecter</button>
                 </form>
             </div>
         </section>
