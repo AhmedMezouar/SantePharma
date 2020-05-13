@@ -1,28 +1,23 @@
 <?php 
-$dbServername = mysqli_connect("localhost");
-$dbUsername = "root";
-$dbname = "postuler";
-if (isset($_POST['apply_btn']))
-{
+     $db = mysqli_connect("localhost", "root", "" ,"login");
 
-	$name = mysql_real_escape_string($_POST['name']);
-	$email = mysql_real_escape_string($_POST['email']);
-	$phonenumber = mysql_real_escape_int($_POST['phonenumber']);
-	$birthday = mysql_real_escape_int($_POST['birthday']);
-	$specialite = mysql_real_escape_string($_POST['specialite']);
-	$commentaire = mysql_real_escape_string($_POST['commentaire']);
+     if (isset($_POST['valid']))
+     {
 
-	if(isset($_POST['submit']))
-		{
-		
-       if(empty($_POST['email']) || empty($_POST['name'] || empty($_POST['phonenumber'] || empty($_POST['birthday'] || empty($_POST['specialite'] || empty($_POST['commentaire']))
-       {
-            header("location:apply.php?Empty= Please Fill in the Blanks");
-       }
-    $sql = "INSERT INTO postuler(name, email, phonenumber,birthday, specialte, commentaire) VALUES ('$name', '$email', '$phonenumber', '$birthday', '$specialite', '$commentaire')";
-	mysqli_query($db, $sql);
-	$_SESSION ['message'] = "Votre demande a bien été transmise";}
-}
+          $nom = $_POST['nom'];
+          $email = $_POST['email'];
+          $phone = $_POST['phone'];
+          $dateN = $_POST['dateN'];
+          $specialiste = $_POST['specialiste'];
+          /*     
+          if(empty($_POST['email']) || empty($_POST['nom'] || empty($_POST['phone'] || empty($_POST['dateN'] || empty($_POST['specialiste'] || empty($_POST['commentaire']))
+          {
+               header("location:medicament.html?Empty= Please Fill in the Blanks");
+          } */
+          $sql = "INSERT INTO postuler(nom, email, phone,dateN, specialiste) VALUES ('$nom', '$email', '$phone', '$dateN', '$specialiste')";
+          mysqli_query($db, $sql);
+          $_SESSION ['message'] = "Votre demande a bien été transmise";
+     }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -148,7 +143,7 @@ if (isset($_POST['apply_btn']))
                               <div class="wow fadeInUp" data-wow-delay="0.8s">
                                    <div class="col-md-6 col-sm-6">
                                         <label for="name">Nom</label>
-                                        <input type="text" class="form-control" id="name" name="name" placeholder="Nom Prénom">
+                                        <input type="text" class="form-control" id="name" name="nom" placeholder="Nom Prénom">
                                    </div>
 
                                    <div class="col-md-6 col-sm-6">
@@ -158,24 +153,24 @@ if (isset($_POST['apply_btn']))
 
                                    <div class="col-md-6 col-sm-6">
                                         <label for="date">Date de Naissance</label>
-                                        <input type="date" name="date" value="" class="form-control">
+                                        <input type="date" name="dateN" value="" class="form-control">
                                    </div>
 
                                    <div class="col-md-6 col-sm-6">
                                         <label for="select">Séléctionner votre Spécialité</label>
-                                        <select class="form-control">
-                                             <option>Les Deux </option>
-                                             <option>Infirmier </option>
-                                             <option>Vendeur (se) Pharmacie</option>
+                                        <select class="form-control" name="specialiste">
+                                             <option value="deux">Les Deux </option>
+                                             <option value="infirmier">Infirmier </option>
+                                             <option value="veneur_Pharmacie">Vendeur (se) Pharmacie</option>
                                         </select>
                                    </div>
 
                                    <div class="col-md-12 col-sm-12">
                                         <label for="telephone">Némuro Téléphone</label>
                                         <input type="tel" class="form-control" id="phone" name="phone" placeholder="Némuro De Téléphone ">
-                                        <label for="Message">Commentaire : </label>
-                                        <textarea class="form-control" rows="5" id="message" name="message" placeholder="Message"></textarea>
-                                        <button type="submit" class="form-control" id="cf-submit" name="submit">Valaide</button>
+                                       <!-- <label for="Message">Commentaire : </label>
+                                         <textarea class="form-control" rows="5" id="message" name="message" placeholder="Message"></textarea>-->
+                                        <button type="submit" class="form-control" id="cf-submit" name="valid">Valaide</button>
                                    </div>
                               </div>
                         </form>
