@@ -88,9 +88,8 @@ CREATE TABLE `user` (
 -- Déchargement des données de la table `user`
 --
 
-INSERT INTO `user` (`id_U`, `Nom`, `prenom`, `date`, `email`, `password`, `Sexe`, `specialte`, `HOV`, `HOF`, `numAgre`, `numTel`, `dateInsec`) VALUES
-(1, 'Mezouar', 'ahmed', '1998-09-26', 'ahmed.mezouar26@gmail.com', '12345', 'homme', 'Medecin', '08:00', '20:00', '25252525', '+213671205465', '2020-05-12 23:00:00');
-
+INSERT INTO `user` (`id_U`, `Nom`, `prenom`, `date`, `email`, `password`, `Sexe`, `addres`, `region`, `wilaya`, `specialte`, `HOV`, `HOF`, `numAgre`, `numTel`, `dateInsec`) VALUES
+(1, 'Mezouar', 'ahmed', '1998-09-26', 'ahmed.mezouar26@gmail.com', '12345', 'homme', '', '', '0', 'Medecin', '08:00', '20:00', '25252525', '+213671205465', '2020-05-12 23:00:00');
 --
 -- Index pour les tables déchargées
 --
