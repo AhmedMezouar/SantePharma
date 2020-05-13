@@ -30,36 +30,7 @@ $_SESSION['message'] = "the two passwords do not match";
 }
 ?> 
 <?php
-session_start();
-if(isset($_POST['email']) && isset($_POST['password']))
-{
 
-    if($email !== "" && $password !== "")
-    {
-        $requete = "SELECT count(*) FROM login where 
-              nom_utilisateur = '".$email."' and mot_de_passe = '".$password."' ";
-        $exec_requete = mysqli_query($db,$requete);
-        $reponse      = mysqli_fetch_array($exec_requete);
-        $count = $reponse['count(*)'];
-        if($count!=0) // nom d'utilisateur et mot de passe correctes
-        {
-           $_SESSION['email'] = $email;
-           header('Location: principale.php');
-        }
-        else
-        {
-           header('Location: login.php?erreur=1'); // utilisateur ou mot de passe incorrect
-        }
-    }
-    else
-    {
-       header('Location: login.php?erreur=2'); // utilisateur ou mot de passe vide
-    }
-}
-else
-{
-   header('Location: login.php');
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
