@@ -332,7 +332,7 @@ b {
     color: #22c48e;
   }
 .navbar-default .navbar-brand:hover {
-    font-size: 24px;
+    font-size: 12px;
 }
   .navbar-default .navbar-nav li.appointment-btn {
     margin: 3px 0 0 20px;
@@ -384,7 +384,7 @@ b {
 
   .navbar-default .navbar-nav > li a:hover {
     color: #22c48e !important;
-    font-size: 17px;
+    font-size: 12px;
   } 
 
   .navbar-default .navbar-nav > li > a:hover,
@@ -413,6 +413,9 @@ b {
   .navbar-default .navbar-toggle:hover,
   .navbar-default .navbar-toggle:focus { 
     background-color: transparent;
+  }
+  #dorpDown li {
+    text-decoration: none;
   }
 
   /*---------------------------------------
