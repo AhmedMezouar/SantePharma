@@ -113,63 +113,50 @@
      </section> 
      <div class="tab_def">
           <p>
-               Dans ce tableau se trouvent les différents médicaments produits en Algérie, <br>
-               Veuillez cocher les produits disponibles dans votre pharmacie.
-          </p>
+               Dans ce tableau se trouvent les différents médicaments produits en Algérie. <br>          </p>
      </div>
-     
-     <table class="table">
-          <thead>
-            <tr>
+     <table class="table table-hover">
+        <thead style="background-color: #98ffdda2;">
+        <tr>
               <th scope="col">#</th>
-              <th scope="col">NOM_DE_MARQUE</th>
               <th scope="col">DENOMINATION_COMMUNE_INTERNATIONALE</th>
+              <th scope="col">NOM_DE_MARQUE</th>
               <th scope="col">DOSAGE</th>
+              <th scope="col">COND</th>
               <th scope="col">PAYS_DU_LABORATOIRE</th>
-              <th scope="col">DISPONIBLE</th>
+              <th scope="col">DUREE_DE_STABILITE</th>
             </tr>
-          </thead>
-          <tbody>
-            <tr>
+        </thead>
+        <tbody>
+        <tr>
               <th scope="row">1</th>
-              <td>OMEPRAZOLE GEBER</td>
-              <td>OMEPRAZOLE</td>
-              <td>20MG</td>
+              <td>LORATADINE</td>
+              <td>GELARTINE</td>
+              <td>10MG</td>
+              <td>B/30</td>
               <td>ALGERIE</td>
-              <td>
-                   <div class="form-check">
-                    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-                  </div>
-              </td>
-            </tr>
-            <tr>
-               <th scope="row">2</th>
-               <td>SKENAN LP</td>
-               <td>MORPHINE SULFATE</td>
-               <td>30MG</td>
-               <td>FRANCE</td>
-               <td>
-                    <div class="form-check">
-                     <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-                   </div>
-               </td>
-             </tr>
-            <tr>
-               <th scope="row">3</th>
-               <td>DOLIPRANE</td>
-               <td>PARACETAMOL</td>
-               <td>500MG</td>
-               <td>ALGERIE</td>
-               <td>
-                    <div class="form-check">
-                     <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-                   </div>
-               </td>
-             </tr>           
-
-          </tbody>
+              <td>36 MOIS</td>
+        </tr>
+        <tr>
+              <th scope="row">2</th>
+              <td>LORATADINE</td>
+              <td>GELARTINE</td>
+              <td>10MG</td>
+              <td>B/30</td>
+              <td>ALGERIE</td>
+              <td>36 MOIS</td>
+        </tr>
+        <tr>
+              <th scope="row">3</th>
+              <td>LORATADINE</td>
+              <td>GELARTINE</td>
+              <td>10MG</td>
+              <td>B/30</td>
+              <td>ALGERIE</td>
+              <td>36 MOIS</td>
+        </tr>
+        </tbody>
         </table>
-
      <footer>
 
        <div>

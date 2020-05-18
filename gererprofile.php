@@ -88,47 +88,8 @@
 
           </div>
      </section>
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-        <h2>Identification</h2>
-        <section id="sign">
-             <div class="wow fadeInUp" data-wow-delay="0.8s">
-                <form method="post" action="process.php">
-                <?php
-                    if(@$_GET['Empty']==true)
-                    {
-                ?>
-                    <div class="alert-light text-danger text-center py-3"><?php echo $_GET['Empty'] ?></div>                                
-                <?php
-                    }
-                ?>
-
-
-                <?php
-                    if(@$_GET['Invalid']==true)
-                    {
-                ?>
-                    <div class="alert-light text-danger text-center py-3"><?php echo $_GET['Invalid'] ?></div>                                
-                <?php
-                    }
-                ?>
-                  <div class="form-group" method="post"  action="erreur.php">
-                    <label for="exampleInputEmail1"> Address Email</label>
-                    <input type="email" class="form-control mb-3" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entre email" name=email >
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Mot De Passe</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mot de passe" name=Password>
-               <!--     <small id="emailHelp" class="form-text text-muted"  >Nous ne partagerons jamais votre e-mail avec quelqu'un d'autre.</small> -->
-                  </div>
-                  <button type="submit" class="btn btn-primary" name="connect">Connecter</button>
-                </form>
-            </div>
-        </section>
-      </div>
     <div class="col-sm-8">
-        <h2>Crée un Compte</h2>
+        <h2>Gérer Votre Profile</h2>
             <section id="sign">
 				<form method="post" action="identifier.php">
                        <div class="wow fadeInUp" data-wow-delay="0.8s">

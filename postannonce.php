@@ -66,14 +66,14 @@
      </section>
 
 
-     <!-- ABOUT -->
+     <!-- ABOUT 
      <section id="about1">
           <div class="container">
                <div class="row">
 
                     <div class="col-md-6 col-sm-6">
                          <div class="about-info">
-                              <h2 class="wow fadeInUp" data-wow-delay="0.6s"><b>S</b>anté Pharma "Médecine"</h2>
+                             <!-- <h2 class="wow fadeInUp" data-wow-delay="0.6s"><b>S</b>anté Pharma "Médecine"</h2>
                               <div class="wow fadeInUp" data-wow-delay="0.8s">
                                    <p>La médecine au sens de pratique, est la science témoignant de l'organisation du corps humain, 
                                         son fonctionnement normal, et cherchant à préserver la santé (physique comme mentale) par la prévention 
@@ -85,160 +85,73 @@
                                         
                               </div>
                          </div>
-                    </div>
+                    </div> 
                     
                </div>
           </div>
-     </section>
+     </section> -->
 
 
      <!-- TEAM -->
      <section id="team" data-stellar-background-ratio="1">
           <div class="container">
-               <div class="row">
-                
-                 <div class="col-md-6 col-sm-6">
+                <div class="col-md-6 col-sm-6" style="width:100%;">
                          <div class="about-info">
-                              <h2 class="wow fadeInUp" data-wow-delay="0.1s">Nos Médecins</h2>
+                              <h2 class="wow fadeInUp" data-wow-delay="0.1s">Liste Des annonces : </h2>
                          </div>
                     </div>
+                    <div class="row">
+                         <div class="col-sm-6">
+                         	<div class="card">
+                              <div class="card-body">
+                              <h5 class="card-title">Special title treatment</h5>
+                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                              </div>
+                        	</div>
+                         </div> 
 
-                    <div class="clearfix"></div>
-
-                    <div class="col-md-4 col-sm-6">
-                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
-                              <img src="images/team-image1.jpg" class="img-responsive" alt="">
-
-                                   <div class="team-info">
-                                        <h3>Nate Baston</h3>
-                                        <p>General Principal</p>
-                                        <div class="team-contact-info">
-                                             <p><i class="fa fa-phone"></i> 010-020-0120</p>
-                                             <p><i class="fa fa-envelope-o"></i> <a href="#">general@company.com</a></p>
-                                        </div>
-                                        <ul class="social-icon">
-                                             <li><a href="#" class="fa fa-linkedin-square"></a></li>
-                                             <li><a href="#" class="fa fa-envelope-o"></a></li>
-                                        </ul>
-                                   </div>
-
-                         </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6">
-                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
-                              <img src="images/team-image2.jpg" class="img-responsive" alt="">
-
-                                   <div class="team-info">
-                                        <h3>Jason Stewart</h3>
-                                        <p>Pregnancy</p>
-                                        <div class="team-contact-info">
-                                             <p><i class="fa fa-phone"></i> 010-070-0170</p>
-                                             <p><i class="fa fa-envelope-o"></i> <a href="#">pregnancy@company.com</a></p>
-                                        </div>
-                                        <ul class="social-icon">
-                                             <li><a href="#" class="fa fa-facebook-square"></a></li>
-                                             <li><a href="#" class="fa fa-envelope-o"></a></li>
-                                             <li><a href="#" class="fa fa-flickr"></a></li>
-                                        </ul>
-                                   </div>
-
-                         </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6">
-                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.6s">
-                              <img src="images/team-image3.jpg" class="img-responsive" alt="">
-
-                                   <div class="team-info">
-                                        <h3>Miasha Nakahara</h3>
-                                        <p>Cardiology</p>
-                                        <div class="team-contact-info">
-                                             <p><i class="fa fa-phone"></i> 010-040-0140</p>
-                                             <p><i class="fa fa-envelope-o"></i> <a href="#">cardio@company.com</a></p>
-                                        </div>
-                                        <ul class="social-icon">
-                                             <li><a href="#" class="fa fa-twitter"></a></li>
-                                             <li><a href="#" class="fa fa-envelope-o"></a></li>
-                                        </ul>
-                                   </div>
-
-                         </div>
-                    </div>
+                         <div class="col-sm-6">
+                         	<div class="card">
+                              <div class="card-body">
+                              <h5 class="card-title">Special title treatment</h5>
+                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                              </div>
+                        	</div>
+                         </div> 
+                         <div class="col-sm-6">
+                         	<div class="card">
+                              <div class="card-body">
+                              <h5 class="card-title">Special title treatment</h5>
+                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                              </div>
+                        	</div>
+                         </div> 
+                         <div class="col-sm-6">
+                         	<div class="card">
+                              <div class="card-body">
+                              <h5 class="card-title">Special title treatment</h5>
+                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                              </div>
+                        	</div>
+                         </div> 
+                         <div class="col-sm-6">
+                         	<div class="card">
+                              <div class="card-body">
+                              <h5 class="card-title">Special title treatment</h5>
+                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                              </div>
+                        	</div>
+                         </div> 
+                   
 
                </div>
           </div>
      </section>
-     <section id="team" data-stellar-background-ratio="1">
-          <div class="container">
-               <div class="row">
-                      <div class="clearfix"></div>
-
-                    <div class="col-md-4 col-sm-6">
-                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
-                              <img src="images/team-image1.jpg" class="img-responsive" alt="">
-
-                                   <div class="team-info">
-                                        <h3>Nate Baston</h3>
-                                        <p>General Principal</p>
-                                        <div class="team-contact-info">
-                                             <p><i class="fa fa-phone"></i> 010-020-0120</p>
-                                             <p><i class="fa fa-envelope-o"></i> <a href="#">general@company.com</a></p>
-                                        </div>
-                                        <ul class="social-icon">
-                                             <li><a href="#" class="fa fa-linkedin-square"></a></li>
-                                             <li><a href="#" class="fa fa-envelope-o"></a></li>
-                                        </ul>
-                                   </div>
-
-                         </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6">
-                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
-                              <img src="images/team-image2.jpg" class="img-responsive" alt="">
-
-                                   <div class="team-info">
-                                        <h3>Jason Stewart</h3>
-                                        <p>Pregnancy</p>
-                                        <div class="team-contact-info">
-                                             <p><i class="fa fa-phone"></i> 010-070-0170</p>
-                                             <p><i class="fa fa-envelope-o"></i> <a href="#">pregnancy@company.com</a></p>
-                                        </div>
-                                        <ul class="social-icon">
-                                             <li><a href="#" class="fa fa-facebook-square"></a></li>
-                                             <li><a href="#" class="fa fa-envelope-o"></a></li>
-                                             <li><a href="#" class="fa fa-flickr"></a></li>
-                                        </ul>
-                                   </div>
-
-                         </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6">
-                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.6s">
-                              <img src="images/team-image3.jpg" class="img-responsive" alt="">
-
-                                   <div class="team-info">
-                                        <h3>Miasha Nakahara</h3>
-                                        <p>Cardiology</p>
-                                        <div class="team-contact-info">
-                                             <p><i class="fa fa-phone"></i> 010-040-0140</p>
-                                             <p><i class="fa fa-envelope-o"></i> <a href="#">cardio@company.com</a></p>
-                                        </div>
-                                        <ul class="social-icon">
-                                             <li><a href="#" class="fa fa-twitter"></a></li>
-                                             <li><a href="#" class="fa fa-envelope-o"></a></li>
-                                        </ul>
-                                   </div>
-
-                         </div>
-                    </div>
-
-               </div>
-          </div>
-     </section>
-
 
      <!-- GOOGLE MAP -->
      <!--<section id="google-map">

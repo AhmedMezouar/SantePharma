@@ -73,6 +73,7 @@
                     <ul class="nav navbar-nav navbar-right">
                          <li><a href="#top" class="smoothScroll">Accueil</a></li>
                          <li><a href="#about" class="smoothScroll">Sur SPharma</a></li>
+                         <li><a href="listemedicam.php" class="smoothScroll">Medicament</a></li>
                          <li><a href="#team" class="smoothScroll">Médecins</a></li>
                          <li><a href="#team1" class="smoothScroll">Laboratoire</a></li>
                          <li><a href="#footer" class="smoothScroll">Contact</a></li>
@@ -219,10 +220,11 @@
 
                          </div>
                     </div>
+                    <a href="medecin.php"><button type="button" class="btn btn-primary1 btn-lg btn-block">Afficher La Liste Des Médecins</button> </a>
                    <!-- <a href="#" class="section-btn1 btn btn-default smoothScroll">Recherche</a> -->
                </div>
           </div> 
-          <a href="medecin.php"><button type="button" class="btn btn-primary1 btn-lg btn-block">Afficher La Liste Des Médecins</button> </a>
+          <!-- <a href="medecin.php"><button type="button" class="btn btn-primary2 btn-lg btn-block">Afficher La Liste Des Médecins</button> </a> -->
      </section>
          <!-- TEAM -->
 

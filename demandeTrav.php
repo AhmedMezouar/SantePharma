@@ -68,16 +68,17 @@
                     </button>
 
                     <!-- lOGO TEXT HERE -->
-                    <a href="index.html" class="navbar-brand"><b>S</b>anté Pharma</a>
+                    <a href="index.php" class="navbar-brand"><b>S</b>anté Pharma</a>
                </div>
 
                <!-- MENU LINKS -->
                <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                         <li><a href="index.html" class="smoothScroll">Accueil</a></li>
-                         <li><a href="index.html" class="smoothScroll">Sur SPharma</a></li>
-                         <li><a href="index.html" class="smoothScroll">Médecins</a></li>
-                         <li><a href="index.html" class="smoothScroll">Laboratoire</a></li>
+                         <li><a href="index.php" class="smoothScroll">Accueil</a></li>
+                         <li><a href="index.php" class="smoothScroll">Sur SPharma</a></li>
+                         <li><a href="listemedicam.php" class="smoothScroll">Medicament</a></li>
+                         <li><a href="index.php" class="smoothScroll">Médecins</a></li>
+                         <li><a href="index.php" class="smoothScroll">Laboratoire</a></li>
                          <li><a href="#google-map" class="smoothScroll">Contact</a></li> 
                          <li class="nav-item dropdown">
                               <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
@@ -172,10 +173,10 @@
                          </div>
                          <div class="col-md-6 col-sm-6">
                               <div class="footer-link"> 
-                                   <a href="index.html">Recherche</a>
-                                   <a href="index.html">Médecins</a>
-                                   <a href="index.html">Laboratoire</a>
-                                   <a href="index.html">Demande Travail</a>
+                                   <a href="index.php">Recherche</a>
+                                   <a href="index.php">Médecins</a>
+                                   <a href="index.php">Laboratoire</a>
+                                   <a href="index.php">Demande Travail</a>
                               </div>
                          </div>
                          <div class="col-md-2 col-sm-2 text-align-center">
