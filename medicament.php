@@ -79,6 +79,15 @@
                          <li><a href="index.php" class="smoothScroll">Laboratoire</a></li>
                          <li><a href="#google-map" class="smoothScroll">Contact</a></li> 
                          <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Profile</a>
+                              <div class="dropdown-menu">
+                                   <a class="dropdown-item" href="#">Gérer Profile</a>
+                                   <a class="dropdown-item" href="#">Demande_travail</a>
+                                   <div class="dropdown-divider"></div>
+                                   <a class="dropdown-item" href="#">Déconnexion</a>
+                              </div>
+                         </li> <!--
+                         <li class="nav-item dropdown">
                               <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
                                    <div class="btn-group" role="group">
                                      <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -87,10 +96,11 @@
                                      <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
                                        <a class="dropdown-item" href="#">Gérer Profile</a>
                                        <a class="dropdown-item" href="demandeTrav.php">Demande de travail</a>
+                                       <a class="dropdown-item" href="demandeTrav.php">Déconnexion</a>
                                      </div>
                                    </div>
                                  </div>
-                         </li>
+                         </li> -->
 
 <!--                         <li class="appointment-btn1"><a href="#appointment">S'identifier</a></li> -->
 
