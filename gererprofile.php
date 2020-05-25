@@ -56,6 +56,7 @@
 
 
      <!-- MENU -->
+
      <section class="navbar navbar-default navbar-static-top" role="navigation">
           <div class="container">
 
@@ -67,16 +68,17 @@
                     </button>
 
                     <!-- lOGO TEXT HERE -->
-                    <a href="index.html" class="navbar-brand"><b>S</b>anté Pharma</a>
+                    <a href="index.php" class="navbar-brand"><b>S</b>anté Pharma</a>
                </div>
 
                <!-- MENU LINKS -->
                <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                         <li><a href="index.html" class="smoothScroll">Accueil</a></li>
-                         <li><a href="index.html" class="smoothScroll">Sur SPharma</a></li>
-                         <li><a href="index.html" class="smoothScroll">Médecins</a></li>
-                         <li><a href="index.html" class="smoothScroll">Laboratoire</a></li>
+                         <li><a href="index.php" class="smoothScroll">Accueil</a></li>
+                         <li><a href="index.php" class="smoothScroll">Sur SPharma</a></li>
+                         <li><a href="listemedicam.php" class="smoothScroll">Medicament</a></li>
+                         <li><a href="index.php" class="smoothScroll">Médecins</a></li>
+                         <li><a href="index.php" class="smoothScroll">Laboratoire</a></li>
                          <li><a href="#google-map" class="smoothScroll">Contact</a></li>
 <!--                         <li class="appointment-btn1"><a href="#appointment">S'identifier</a></li> -->
 
@@ -86,143 +88,134 @@
 
           </div>
      </section>
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-        <h2>Identification</h2>
-        <section id="sign">
-             <div class="wow fadeInUp" data-wow-delay="0.8s">
-                <form>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1"> Address Email</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entre email">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Mot De Passe</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mot de passe">
-                    <small id="emailHelp" class="form-text text-muted">Nous ne partagerons jamais votre e-mail avec quelqu'un d'autre.</small>
-                  </div>
-                  <button type="submit" class="btn btn-primary" name="submit">Connecter</button>
-                </form>
-            </div>
-        </section>
-      </div>
     <div class="col-sm-8">
-        <h2>Crée un Compte</h2>
+        <h2>Gérer Votre Profile</h2>
             <section id="sign">
-                <div class="wow fadeInUp" data-wow-delay="0.8s">
-                                   <div class="col-md-6 col-sm-6">
+				<form method="post" action="identifier.php">
+                       <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                   <div class="col-md-6 col-sm-6" style="padding-bottom:10px;">
                                         <label for="name">Nom</label>
-                                        <input type="text" class="form-control" id="name" name="name" placeholder="Nom">
+                                        <input type="text" class="form-control" id="name" name="nom" placeholder="Nom">
                                    </div>
-                                   <div class="col-md-6 col-sm-6">
+                                   <div class="col-md-6 col-sm-6" style="padding-bottom:10px;">
                                         <label for="name">Prénom</label>
-                                        <input type="text" class="form-control" id="name" name="name" placeholder="Prénom">
+                                        <input type="text" class="form-control" id="name" name="prenom" placeholder="Prénom">
                                    </div>
 
-                                   <div class="col-md-6 col-sm-6">
+                                   <div class="col-md-6 col-sm-6" style="padding-bottom:10px;">
                                         <label for="email">Email</label>
                                         <input type="email" class="form-control" id="email" name="email" placeholder="Votre Email">
                                    </div>
-                                   <div class="col-md-6 col-sm-6">
+                                   <div class="col-md-6 col-sm-6" style="padding-bottom:10px;">
                                         <label for="name">Mot de Passe </label>
-                                        <input type="password" class="form-control" id="name" name="name" placeholder="Mot de Passe">
+                                        <input type="password" class="form-control" id="name" name="password" placeholder="Mot de Passe">
                                    </div>
-                                   <div class="col-md-6 col-sm-6">
+                                   <div class="col-md-6 col-sm-6" style="padding-bottom:10px;">
                                         <label for="date">Date de Naissance</label>
                                         <input type="date" name="date" value="" class="form-control">
                                    </div>
 
-                                   <div class="col-md-6 col-sm-6">
+                                   <div class="col-md-6 col-sm-6" style="padding-bottom:10px;">
                                         <label for="select">Séléctionner votre Spécialité</label>
-                                        <select class="form-control">
-                                             <option>Pharmacie </option>
-                                             <option>Médecin </option>
+                                        <select class="form-control" name="specialte">
+                                             <option value="Pharmacie">Pharmacie </option>
+                                             <option value="Medecin">Médecin </option>
                                         </select>
                                    </div>
-                                   <div class="col-md-12 col-sm-12">
+                                   <div class="col-md-12 col-sm-12" style="padding-bottom:10px;">
+                                        <label for="telephone">Adresse complète</label>
+                                        <input type="tel" class="form-control" name="addres" placeholder="Adresse complète">
+                                   </div>
+                                   <div class="col-md-4 col-sm-4"  style="padding-bottom:10px;">
+                                        <label for="telephone">Région</label>
+                                        <input type="tel" class="form-control" name="region" placeholder="Région ( Daira )">
+                                   </div>
+                                   <div class="col-md-4 col-sm-4"  style="padding-bottom:10px;">
+                                        <label for="telephone">Wilaya</label>
+                                        <input type="tel" class="form-control" name="wilaya" placeholder="Wilaya ..">
+                                   </div>
+                                   <div class="col-md-4 col-sm-4"  style="padding-bottom:10px;">
                                         <label for="select"> Sexe </label>
-                                        <select class="form-control">
-                                             <option>Homme </option>
-                                             <option>Femme </option>
+                                        <select class="form-control" name="sexe">
+                                             <option value="homme">Homme </option>
+                                             <option value="femme">Femme </option>
                                         </select>
                                    </div>
-                                   <div class="form-group col-md-6">
+                                   <div class="form-group col-md-6" style="padding-bottom:10px;">
                                         <label for="inputState">Ouvre à :</label>
-                                        <select id="inputState" class="form-control">
+                                        <select id="inputState" class="form-control" name="HOV">
                                           <option selected>Heure de Ouverture</option>
-                                          <option>01:00</option>
-                                          <option>02:00</option>
-                                          <option>03:00</option>
-                                          <option>04:00</option>
-                                          <option>05:00</option>
-                                          <option>06:00</option>
-                                          <option>07:00</option>
-                                          <option>08:00</option>
-                                          <option>09:00</option>
-                                          <option>10:00</option>
-                                          <option>11:00</option>
-                                          <option>12:00</option>
-                                          <option>13:00</option>
-                                          <option>14:00</option>
-                                          <option>15:00</option>
-                                          <option>16:00</option>
-                                          <option>17:00</option>
-                                          <option>18:00</option>
-                                          <option>19:00</option>
-                                          <option>20:00</option>
-                                          <option>21:00</option>
-                                          <option>22:00</option>
-                                          <option>23:00</option>
-                                          <option>00:00</option>
+                                          <option value="01:00">01:00</option>
+                                          <option value="02:00">02:00</option>
+                                          <option value="03:00">03:00</option>
+                                          <option value="04:00">04:00</option>
+                                          <option value="05:00">05:00</option>
+                                          <option value="06:00">06:00</option>
+                                          <option value="07:00">07:00</option>
+                                          <option value="08:00">08:00</option>
+                                          <option value="09:00">09:00</option>
+                                          <option value="10:00">10:00</option>
+                                          <option value="11:00">11:00</option>
+                                          <option value="12:00">12:00</option>
+                                          <option value="13:00">13:00</option>
+                                          <option value="14:00">14:00</option>
+                                          <option value="15:00">15:00</option>
+                                          <option value="16:00">16:00</option>
+                                          <option value="17:00">17:00</option>
+                                          <option value="18:00">18:00</option>
+                                          <option value="19:00">19:00</option>
+                                          <option value="20:00">20:00</option>
+                                          <option value="21:00">21:00</option>
+                                          <option value="22:00">22:00</option>
+                                          <option value="23:00">23:00</option>
+                                          <option value="24:00">00:00</option>
                                         </select>
                                       </div>
 
-                                      <div class="form-group col-md-6">
+                                      <div class="form-group col-md-6" style="padding-bottom:10px;">
                                         <label for="inputState">Fermé à :</label>
-                                        <select id="inputState" class="form-control">
+                                        <select id="inputState" class="form-control" name="HOF">
                                           <option selected>Heure de Fermeture</option>
-                                          <option>01:00</option>
-                                          <option>02:00</option>
-                                          <option>03:00</option>
-                                          <option>04:00</option>
-                                          <option>05:00</option>
-                                          <option>06:00</option>
-                                          <option>07:00</option>
-                                          <option>08:00</option>
-                                          <option>09:00</option>
-                                          <option>10:00</option>
-                                          <option>11:00</option>
-                                          <option>12:00</option>
-                                          <option>13:00</option>
-                                          <option>14:00</option>
-                                          <option>15:00</option>
-                                          <option>16:00</option>
-                                          <option>17:00</option>
-                                          <option>18:00</option>
-                                          <option>19:00</option>
-                                          <option>20:00</option>
-                                          <option>21:00</option>
-                                          <option>22:00</option>
-                                          <option>23:00</option>
-                                          <option>00:00</option>
+                                          <option value="01:00">01:00</option>
+                                          <option value="02:00">02:00</option>
+                                          <option value="03:00">03:00</option>
+                                          <option value="04:00">04:00</option>
+                                          <option value="05:00">05:00</option>
+                                          <option value="06:00">06:00</option>
+                                          <option value="07:00">07:00</option>
+                                          <option value="08:00">08:00</option>
+                                          <option value="09:00">09:00</option>
+                                          <option value="10:00">10:00</option>
+                                          <option value="11:00">11:00</option>
+                                          <option value="12:00">12:00</option>
+                                          <option value="13:00">13:00</option>
+                                          <option value="14:00">14:00</option>
+                                          <option value="15:00">15:00</option>
+                                          <option value="16:00">16:00</option>
+                                          <option value="17:00">17:00</option>
+                                          <option value="18:00">18:00</option>
+                                          <option value="19:00">19:00</option>
+                                          <option value="20:00">20:00</option>
+                                          <option value="21:00">21:00</option>
+                                          <option value="22:00">22:00</option>
+                                          <option value="23:00">23:00</option>
+                                          <option value="24:00">00:00</option>
                                         </select>
                                       </div>
                                    
-                                   <div class="col-md-12 col-sm-12">
+                                   <div class="col-md-12 col-sm-12" style="padding-bottom:10px;">
                                         <label for="telephone">Némuro D'agrément</label>
-                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Numéro d'agrément">
+                                        <input type="tel" class="form-control" id="phone" name="numAgre" placeholder="Numéro d'agrément">
                                    </div>
-                                   <div class="col-md-12 col-sm-12">
+                                   <div class="col-md-12 col-sm-12" style="padding-bottom:10px;">
                                         <label for="telephone">Némuro Téléphone</label>
-                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Némuro De Téléphone ">
-                                    <div class="form-group form-check">
-                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                        <label class="form-check-label" for="exampleCheck1">J'accepte les termes et conditions pour m'inscrire à ce service.</label>
-                                       </div>
-                                       <button type="submit" class="btn btn-primary" name="submit">S'inscrire</button>
-                                   </div>
-                </div>
+                                        <input type="tel" class="form-control" id="phone" name="numTel" placeholder="Némuro De Téléphone ">
+                                   </div> 
+                                   <div class="col-md-12 col-sm-12">
+                                   </div> 
+                                   <button type="submit" class="btn btn-primary" name="register_btn" value="Register" style="margin-left:14px; width:50%;">S'inscrire</button>
+				</div>
+				</form>
     </section>
       </div>
   </div>
@@ -297,10 +290,10 @@
                          </div>
                          <div class="col-md-6 col-sm-6">
                               <div class="footer-link"> 
-                                   <a href="index.html">Recherche</a>
-                                   <a href="index.html">Médecins</a>
-                                   <a href="index.html">Laboratoire</a>
-                                   <a href="index.html">Demande Travail</a>
+                                   <a href="index.php">Recherche</a>
+                                   <a href="index.php">Médecins</a>
+                                   <a href="index.php">Laboratoire</a>
+                                   <a href="index.php">Demande Travail</a>
                               </div>
                          </div>
                          <div class="col-md-2 col-sm-2 text-align-center">
