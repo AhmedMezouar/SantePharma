@@ -149,28 +149,34 @@
                                         <label for="name">Mot de Passe </label>
                                         <input type="password" class="form-control" id="name" name="password" placeholder="Mot de Passe">
                                    </div>
-                                   <div class="col-md-6 col-sm-6" style="padding-bottom:10px;">
+                                   <div class="col-md-4 col-sm-4" style="padding-bottom:10px;">
                                         <label for="date">Date de Naissance</label>
                                         <input type="date" name="date" value="" class="form-control">
                                    </div>
 
-                                   <div class="col-md-6 col-sm-6" style="padding-bottom:10px;">
-                                        <label for="select">Séléctionner votre Spécialité</label>
-                                        <select class="form-control" name="specialte">
+                                   <div class="col-md-4 col-sm-4" style="padding-bottom:10px;">
+                                        <label for="select">Tu es : </label>
+                                        <select class="form-control" name="choix">
                                              <option value="Pharmacie">Pharmacie </option>
                                              <option value="Medecin">Médecin </option>
                                         </select>
                                    </div>
+
+                                   <div class="col-md-4 col-sm-4" style="padding-bottom:10px;">
+                                        <label for="select">Spécialité (Medecin) </label>
+                                        <input type="text" class="form-control" id="specialite" name="specialite" placeholder="specialité pour les medecin">
+                                   </div>
+
                                    <div class="col-md-12 col-sm-12" style="padding-bottom:10px;">
-                                        <label for="telephone">Adresse complète</label>
+                                        <label for="adress">Adresse complète</label>
                                         <input type="tel" class="form-control" name="addres" placeholder="Adresse complète">
                                    </div>
                                    <div class="col-md-4 col-sm-4"  style="padding-bottom:10px;">
-                                        <label for="telephone">Région</label>
+                                        <label for="region">Région</label>
                                         <input type="tel" class="form-control" name="region" placeholder="Région ( Daira )">
                                    </div>
                                    <div class="col-md-4 col-sm-4"  style="padding-bottom:10px;">
-                                        <label for="telephone">Wilaya</label>
+                                        <label for="wilaya">Wilaya</label>
                                         <input type="tel" class="form-control" name="wilaya" placeholder="Wilaya ..">
                                    </div>
                                    <div class="col-md-4 col-sm-4"  style="padding-bottom:10px;">

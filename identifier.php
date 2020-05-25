@@ -13,17 +13,18 @@ if (isset($_POST['register_btn']))
 	$sexe=$_POST['sexe']; 
 	$numAgre=$_POST['numAgre']; 
 	$numTel=$_POST['numTel'];
-    $PhaMed=$_POST['specialte'];
+    $PhaMed=$_POST['choix'];
     $HOV=$_POST['HOV'];
     $HOF=$_POST['HOF'];
 	$addres=$_POST['addres'];
 	$region=$_POST['region'];
 	$wilaya=$_POST['wilaya'];
+	$specialite=$_POST['specialite'];
      
 	//if($password != NULL) {
 	//create user
 	//$password =md5 ($password); // hash password before storing for security purposes
-	$sql = "INSERT INTO user(nom, prenom, email, password, date, numAgre, numTel, sexe, specialte,addres, region, wilaya, HOV, HOF) VALUES ('$nom', '$prenom', '$email', '$password', '$date', '$numAgre', '$numTel', '$sexe', '$PhaMed','$addres', '$region', '$wilaya','$HOV','$HOF')";
+	$sql = "INSERT INTO user(nom, prenom, email, password, date, numAgre, numTel, sexe, choix,addres, region, wilaya, HOV, HOF, specialite) VALUES ('$nom', '$prenom', '$email', '$password', '$date', '$numAgre', '$numTel', '$sexe', '$PhaMed','$addres', '$region', '$wilaya','$HOV','$HOF','$specialite')";
      echo $sql;     
 	 mysqli_query($con, $sql);
 	 

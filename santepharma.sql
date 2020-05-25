@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : sam. 16 mai 2020 à 01:13
+-- Généré le : lun. 25 mai 2020 à 14:56
 -- Version du serveur :  10.4.11-MariaDB
 -- Version de PHP : 7.4.4
 
@@ -42,7 +42,8 @@ CREATE TABLE `postuler` (
 --
 
 INSERT INTO `postuler` (`id`, `nom`, `email`, `phone`, `dateN`, `specialiste`, `dateCreation`) VALUES
-(8, 'Mezouar', 'ahmed.mezouar26@gmail.com', '+213671205465', '1998-09-26', 'veneur_Pharmacie', '2020-05-16 00:12:37');
+(8, 'Mezouar', 'ahmed.mezouar26@gmail.com', '+213671205465', '1998-09-26', 'veneur_Pharmacie', '2020-05-16 00:12:37'),
+(9, 'Mezouar22', 'ahmed.mezouar26@gmail.com', '+213671205465', '2020-05-08', 'deux', '2020-05-19 18:33:49');
 
 -- --------------------------------------------------------
 
@@ -51,7 +52,7 @@ INSERT INTO `postuler` (`id`, `nom`, `email`, `phone`, `dateN`, `specialiste`, `
 --
 
 CREATE TABLE `user` (
-  `id_U` int(11) NOT NULL,
+  `id_U` int(3) NOT NULL,
   `Nom` varchar(20) NOT NULL,
   `prenom` varchar(20) NOT NULL,
   `date` date NOT NULL,
@@ -61,7 +62,8 @@ CREATE TABLE `user` (
   `addres` varchar(100) NOT NULL,
   `region` varchar(50) NOT NULL,
   `wilaya` varchar(50) NOT NULL,
-  `specialte` varchar(20) NOT NULL,
+  `choix` varchar(20) NOT NULL,
+  `specialite` varchar(100) NOT NULL,
   `HOV` varchar(6) NOT NULL,
   `HOF` varchar(6) NOT NULL,
   `numAgre` varchar(20) NOT NULL,
@@ -73,8 +75,8 @@ CREATE TABLE `user` (
 -- Déchargement des données de la table `user`
 --
 
-INSERT INTO `user` (`id_U`, `Nom`, `prenom`, `date`, `email`, `password`, `Sexe`, `addres`, `region`, `wilaya`, `specialte`, `HOV`, `HOF`, `numAgre`, `numTel`, `dateInsec`) VALUES
-(30, 'Mezouar', 'ahmed', '1998-09-26', 'ahmed.mezouar26@gmail.com', '12345', 'homme', 'cité azzouni rue 33 num 09', 'maghnia', 'tlemcen', 'Medecin', '07:00', '22:00', '123456789', '+213671205465', '2020-05-15 22:50:54');
+INSERT INTO `user` (`id_U`, `Nom`, `prenom`, `date`, `email`, `password`, `Sexe`, `addres`, `region`, `wilaya`, `choix`, `specialite`, `HOV`, `HOF`, `numAgre`, `numTel`, `dateInsec`) VALUES
+(1, 'Mezouar', 'ahmed', '2019-05-07', 'ahmed.mezouar26@gmail.com', '123456', 'homme', 'cité azzouni rue 33 num 09', 'maghnia', 'tlemcen', 'Medecin', 'Generaliste', '07:00', '15:00', '25252525', '+213671205465', '2020-05-25 12:55:56');
 
 --
 -- Index pour les tables déchargées
@@ -100,13 +102,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour la table `postuler`
 --
 ALTER TABLE `postuler`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_U` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id_U` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -80,10 +80,18 @@
                          <li><a href="index.php" class="smoothScroll">Laboratoire</a></li>
                          <li><a href="#google-map" class="smoothScroll">Contact</a></li> 
                          <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Profile</a>
+                              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                              <?php
+                                   include('connection.php');              
+                                   $query = "SELECT Nom FROM user";
+                                   $stat = $conn->query($query);
+                                   $tab = $stat->fetchAll();
+                                   echo "<p>".$a['Nom']."</p>";
+                              ?> 
+                              </a>
                               <div class="dropdown-menu">
                                    <a class="dropdown-item" href="#">Gérer Profile</a>
-                                   <a class="dropdown-item" href="#">Demande_travail</a>
+                                   <a class="dropdown-item" href="demandeTrav.php">Demande_travail</a>
                                    <div class="dropdown-divider"></div>
                                    <a class="dropdown-item" href="#">Déconnexion</a>
                               </div>
@@ -130,42 +138,16 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>OMEPRAZOLE GEBER</td>
-              <td>OMEPRAZOLE</td>
-              <td>20MG</td>
-              <td>ALGERIE</td>
-              <td>
-                   <div class="form-check">
-                    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-                  </div>
-              </td>
-            </tr>
-            <tr>
-               <th scope="row">2</th>
-               <td>SKENAN LP</td>
-               <td>MORPHINE SULFATE</td>
-               <td>30MG</td>
-               <td>FRANCE</td>
-               <td>
-                    <div class="form-check">
-                     <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-                   </div>
-               </td>
-             </tr>
-            <tr>
-               <th scope="row">3</th>
-               <td>DOLIPRANE</td>
-               <td>PARACETAMOL</td>
-               <td>500MG</td>
-               <td>ALGERIE</td>
-               <td>
-                    <div class="form-check">
-                     <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-                   </div>
-               </td>
-             </tr>           
+          <?php
+               include("connexion2.php");
+               $query = "select * from medicament";
+               $stat = $conn->query($query);
+               $tab = $stat->fetchAll();
+               foreach($tab as $ligne)
+               {
+                    echo "<tr><td>".$ligne ["ID"]."</td><td>".$ligne ["DENOMINATION_COMMUNE_INTERNATIONALE"]."</td><td>".$ligne ["NOM_DE_MARQUE"]."</td><td>".$ligne ["DOSAGE"]."</td><td>".$ligne ["PAYS_DU_LABORATOIRE_DETENTEUR_DE_LA_DECISION_DENREGISTREMENT"]."</td><td><input type='checkbox' id='blankCheckbox' value='option1' aria-label='...'</td></tr>";  
+               }
+          ?>   
 
           </tbody>
         </table>
