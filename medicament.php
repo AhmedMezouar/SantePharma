@@ -80,14 +80,7 @@
                          <li><a href="index.php" class="smoothScroll">Laboratoire</a></li>
                          <li><a href="#google-map" class="smoothScroll">Contact</a></li> 
                          <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                              <?php
-                                   include('connection.php');              
-                                   $query = "SELECT Nom FROM user";
-                                   $stat = $conn->query($query);
-                                   $tab = $stat->fetchAll();
-                                   echo "<p>".$a['Nom']."</p>";
-                              ?> 
+                              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Profile 
                               </a>
                               <div class="dropdown-menu">
                                    <a class="dropdown-item" href="#">Gérer Profile</a>

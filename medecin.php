@@ -96,63 +96,35 @@
      <section id="team" data-stellar-background-ratio="1">
           <div class="container">
                <div class="row">
-                
-                 <div class="col-md-6 col-sm-6">
-                         <div class="about-info">
-                              <h2 class="wow fadeInUp" data-wow-delay="0.1s">Nos Médecins</h2>
-                         </div>
-                    </div>
-
-                    <div class="clearfix"></div>
-
-                    <div class="col-md-4 col-sm-6">
-                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
-                              <img src="images/team-image1.jpg" class="img-responsive" alt="">
-
-                                   <div class="team-info">
-                                        <h3>Nate Baston</h3>
-                                        <p>General Principal</p>
-                                        <div class="team-contact-info">
-                                             <p><i class="fa fa-phone"></i> 010-020-0120</p>
-                                             <p><i class="fa fa-envelope-o"></i> <a href="#">general@company.com</a></p>
-                                        </div>
-                                   </div>
-
-                         </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6">
-                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
-                              <img src="images/team-image2.jpg" class="img-responsive" alt="">
-
-                                   <div class="team-info">
-                                        <h3>Jason Stewart</h3>
-                                        <p>Pregnancy</p>
-                                        <div class="team-contact-info">
-                                             <p><i class="fa fa-phone"></i> 010-070-0170</p>
-                                             <p><i class="fa fa-envelope-o"></i> <a href="#">pregnancy@company.com</a></p>
-                                        </div>
-                                   </div>
-
-                         </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6">
-                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.6s">
-                              <img src="images/team-image3.jpg" class="img-responsive" alt="">
-
-                                   <div class="team-info">
-                                        <h3>Miasha Nakahara</h3>
-                                        <p>Cardiology</p>
-                                        <div class="team-contact-info">
-                                             <p><i class="fa fa-phone"></i> 010-040-0140</p>
-                                             <p><i class="fa fa-envelope-o"></i> <a href="#">cardio@company.com</a></p>
-                                        </div>
-                                   </div>
-
-                         </div>
-                    </div>
-
+               <h2>Liste des Médecins</h2>
+               <table class="table table-hover" style="width:100%">
+                    <thead style="background:#4773d1; color:white;">
+                    <tr>
+                         <th scope="col">#</th>
+                         <th scope="col">NOM</th>
+                         <th scope="col">PRENOM</th>
+                         <th scope="col">SPECIALISTE</th>
+                         <th scope="col">ADRESSE</th>
+                         <th scope="col">WILAYA</th>
+                         <th scope="col">HEURE DE TRAVAILLE</th>
+                         <th scope="col">NUMERO DE TELEOHONE</th>
+                         <th scope="col">EMAIL</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                         <th scope="row">1</th>
+                         <td>MEZOUAR</td>
+                         <td>AHMED</td>
+                         <td>généraliste</td>
+                         <td>Cité 500 longement-MAGHNIA-</td>
+                         <td>Tlemcen</td>
+                         <td>08:00 - 16:00</td>
+                         <td>+2135 53 73 34 97 </td>
+                         <td>ahmed.mezouar26@gmail.com</td>
+                    </tr>
+                    </tbody>
+                    </table>
                </div>
           </div>
      </section>
@@ -173,82 +145,7 @@
      <footer data-stellar-background-ratio="5" id="footer">
           <div class="container">
                <div class="row">
-
-                    <div class="col-md-4 col-sm-4">
-                         <div class="footer-thumb"> 
-                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Contact Info</h4>
-                              <p>Un probléme est servenu ? vous voulez plus de renseignements ? Contactez nous sur l'adresse ou le numéro   suivants : </p>
-
-                              <div class="contact-info">
-                                   <p><i class="fa fa-phone"></i> +213-555-555-555</p>
-                                   <p><i class="fa fa-envelope-o"></i> <a href="#">Exemple@gmail.com</a></p>
-                              </div>
-                         </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-4"> 
-                         <div class="footer-thumb"> 
-                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Latest News</h4>
-                              <div class="latest-stories">
-                                   <div class="stories-image">
-                                        <a href="#"><img src="images/news-image.jpg" class="img-responsive" alt=""></a>
-                                   </div>
-                                   <div class="stories-info">
-                                        <a href="#"><h5>Amazing Technology</h5></a>
-                                        <span>March 08, 2018</span>
-                                   </div>
-                              </div>
-
-                              <div class="latest-stories">
-                                   <div class="stories-image">
-                                        <a href="#"><img src="images/news-image.jpg" class="img-responsive" alt=""></a>
-                                   </div>
-                                   <div class="stories-info">
-                                        <a href="#"><h5>New Healing Process</h5></a>
-                                        <span>February 20, 2018</span>
-                                   </div>
-                              </div>
-                         </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-4"> 
-                         <div class="footer-thumb">
-                              <div class="opening-hours">
-                                   <h4 class="wow fadeInUp" data-wow-delay="0.4s">Opening Hours</h4>
-                                   <p>Monday - Friday <span>06:00 AM - 10:00 PM</span></p>
-                                   <p>Saturday <span>09:00 AM - 08:00 PM</span></p>
-                                   <p>Sunday <span>Closed</span></p>
-                              </div> 
-
-                              <ul class="social-icon">
-                                   <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
-                                   <li><a href="#" class="fa fa-twitter"></a></li>
-                                   <li><a href="#" class="fa fa-instagram"></a></li>
-                              </ul>
-                         </div>
-                    </div>
-
-                    <div class="col-md-12 col-sm-12 border-top">
-                         <div class="col-md-4 col-sm-6">
-                              <div class="copyright-text"> 
-                                   <p>Copyright &copy; 2020</p>
-                              </div>
-                         </div>
-                         <div class="col-md-6 col-sm-6">
-                              <div class="footer-link"> 
-                                   <a href="index.php">Recherche</a>
-                                   <a href="medecin.php">Médecins</a>
-                                   <a href="index.php">Laboratoire</a>
-                                   <a href="#appointment">Demande Travail</a>
-                              </div>
-                         </div>
-                         <div class="col-md-2 col-sm-2 text-align-center">
-                              <div class="angle-up-btn"> 
-                                  <a href="#top" class="smoothScroll wow fadeInUp" data-wow-delay="1.2s"><i class="fa fa-angle-up"></i></a>
-                              </div>
-                         </div>   
-                    </div>
-                    
+               
                </div>
           </div>
      </footer>
