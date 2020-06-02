@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : lun. 25 mai 2020 à 14:56
+-- Généré le : mar. 02 juin 2020 à 22:57
 -- Version du serveur :  10.4.11-MariaDB
 -- Version de PHP : 7.4.4
 
@@ -20,6 +20,58 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `santepharma`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `medecin`
+--
+
+CREATE TABLE `medecin` (
+  `id_U` int(3) NOT NULL,
+  `Nom` varchar(20) NOT NULL,
+  `prenom` varchar(20) NOT NULL,
+  `date` date NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` char(20) NOT NULL,
+  `Sexe` varchar(20) NOT NULL,
+  `addres` varchar(100) NOT NULL,
+  `region` varchar(50) NOT NULL,
+  `wilaya` varchar(50) NOT NULL,
+  `choix` varchar(20) NOT NULL,
+  `specialite` varchar(100) NOT NULL,
+  `HOV` varchar(6) NOT NULL,
+  `HOF` varchar(6) NOT NULL,
+  `numAgre` varchar(20) NOT NULL,
+  `numTel` varchar(20) NOT NULL,
+  `dateInsec` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `pharmacie`
+--
+
+CREATE TABLE `pharmacie` (
+  `id_U` int(3) NOT NULL,
+  `Nom` varchar(20) NOT NULL,
+  `prenom` varchar(20) NOT NULL,
+  `date` date NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` char(20) NOT NULL,
+  `Sexe` varchar(20) NOT NULL,
+  `addres` varchar(100) NOT NULL,
+  `region` varchar(50) NOT NULL,
+  `wilaya` varchar(50) NOT NULL,
+  `choix` varchar(20) NOT NULL,
+  `specialite` varchar(100) NOT NULL,
+  `HOV` varchar(6) NOT NULL,
+  `HOF` varchar(6) NOT NULL,
+  `numAgre` varchar(20) NOT NULL,
+  `numTel` varchar(20) NOT NULL,
+  `dateInsec` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -76,7 +128,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_U`, `Nom`, `prenom`, `date`, `email`, `password`, `Sexe`, `addres`, `region`, `wilaya`, `choix`, `specialite`, `HOV`, `HOF`, `numAgre`, `numTel`, `dateInsec`) VALUES
-(1, 'Mezouar', 'ahmed', '2019-05-07', 'ahmed.mezouar26@gmail.com', '123456', 'homme', 'cité azzouni rue 33 num 09', 'maghnia', 'tlemcen', 'Medecin', 'Generaliste', '07:00', '15:00', '25252525', '+213671205465', '2020-05-25 12:55:56');
+(1, 'Mezouar', 'ahmed', '2019-05-07', 'ahmed.mezouar26@gmail.com', '123456', 'homme', 'cité azzouni rue 33 num 09', 'maghnia', 'tlemcen', 'Medecin', 'Generaliste', '07:00', '15:00', '25252525', '+213671205465', '2020-05-25 12:55:56'),
+(2, '', '', '0000-00-00', 'admin@gmail.com', 'admin', '', '', '', '', '', '', '', '', '', '', '2020-06-02 18:16:42');
 
 --
 -- Index pour les tables déchargées
@@ -108,7 +161,7 @@ ALTER TABLE `postuler`
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_U` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_U` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -83,7 +83,7 @@
                               <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Profile 
                               </a>
                               <div class="dropdown-menu">
-                                   <a class="dropdown-item" href="#">Gérer Profile</a>
+                                   <a class="dropdown-item" href="gererprofile.php">Gérer Profile</a>
                                    <a class="dropdown-item" href="demandeTrav.php">Demande_travail</a>
                                    <div class="dropdown-divider"></div>
                                    <a class="dropdown-item" href="#">Déconnexion</a>

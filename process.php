@@ -5,7 +5,9 @@ session_start();
     {
        if(empty($_POST['email']) || empty($_POST['Password']))
        {
-            header("location: compte.php?Empty= Please Fill in the Blanks");
+           echo "<script> alert('Veuillez Remplir Le Vide')</script>";
+           //header("location: compte.php");
+           header("location: compte.php?Empty= Please Fill in the Blanks");
        }
        else
        {
@@ -15,9 +17,18 @@ session_start();
             if(mysqli_fetch_assoc($result))
             {
                 $_SESSION['User']=$_POST['email'];
-                /*
-                if(specialte == 'Medecin') { */
-                    header ("location: medicament.php");//redirect to home page 
+                
+                if ($_POST['email'] == 'admin@gmail.com') {
+                    header("location: adminPanel.php");
+                    echo "Thank you";
+
+                } else {
+                    header ("location: medicament.php");
+                } /*else if ($_POST['specialite'] == 'Medecin'){
+                    header ("location: medecin.php");//redirect to home page 
+                } else  if ($_POST['specialite'] == 'Pharmacie'){
+                    header ("location: medicament.php");
+                } */
                 
             /*  
                 else if (specialte == 'Pharmacie'){
@@ -26,6 +37,7 @@ session_start();
             }
             else
             {
+                echo "<script> alert('Email ou le mot de pass incorrect')</script>";
                 header("location: compte.php?Invalid= L'email ou le mot de pass incorrect ");
             }
        }

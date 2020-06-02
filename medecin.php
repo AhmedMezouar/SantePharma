@@ -98,7 +98,7 @@
                <div class="row">
                <h2>Liste des Médecins</h2>
                <table class="table table-hover" style="width:100%">
-                    <thead style="background:#4773d1; color:white;">
+                    <thead style="background:#4773d1; color:white; vertical-align: middle;">
                     <tr>
                          <th scope="col">#</th>
                          <th scope="col">NOM</th>
@@ -106,14 +106,26 @@
                          <th scope="col">SPECIALISTE</th>
                          <th scope="col">ADRESSE</th>
                          <th scope="col">WILAYA</th>
-                         <th scope="col">HEURE DE TRAVAILLE</th>
+                         <th scope="col">HEURE DEBUT DE TRAVAILLE</th>
+                         <th scope="col">HEURE FIN DE TRAVAILLE</th>
                          <th scope="col">NUMERO DE TELEOHONE</th>
                          <th scope="col">EMAIL</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                         <th scope="row">1</th>
+                         <?php
+          include("connexion3.php");
+          $query = "select * from user";
+          $stat = $conn->query($query);
+          $tab = $stat->fetchAll();
+          foreach($tab as $ligne)
+          {
+               //echo "<tr><td>".$ligne ["id_U"]."</td></tr>";
+               echo "<tr><td>".$ligne ["id_U"]."</td><td>".$ligne ["Nom"]."</td><td>".$ligne ["prenom"]."</td><th>".$ligne ["specialite"]."</th><td>".$ligne ["addres"]."</td><td>".$ligne ["wilaya"]."</td><td>".$ligne ["HOV"]."</td><td>".$ligne ["HOF"]."</td><td>".$ligne ["numTel"]."</td><td>".$ligne ["email"]."</td></tr>"; 
+          }
+        ?>
+                   <!-- <tr>
+                         
                          <td>MEZOUAR</td>
                          <td>AHMED</td>
                          <td>généraliste</td>
@@ -122,7 +134,7 @@
                          <td>08:00 - 16:00</td>
                          <td>+2135 53 73 34 97 </td>
                          <td>ahmed.mezouar26@gmail.com</td>
-                    </tr>
+                    </tr> -->
                     </tbody>
                     </table>
                </div>

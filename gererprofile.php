@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-     <title>Insecription</title>
+     <title>Gérer Profile</title>
 
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -88,7 +88,9 @@
 
           </div>
      </section>
-    <div class="col-sm-8">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
         <h2>Gérer Votre Profile</h2>
             <section id="sign">
 				<form method="post" action="identifier.php">
@@ -116,22 +118,20 @@
                                    </div>
 
                                    <div class="col-md-6 col-sm-6" style="padding-bottom:10px;">
-                                        <label for="select">Séléctionner votre Spécialité</label>
-                                        <select class="form-control" name="specialte">
-                                             <option value="Pharmacie">Pharmacie </option>
-                                             <option value="Medecin">Médecin </option>
-                                        </select>
+                                        <label for="select">Spécialité (Medecin) </label>
+                                        <input type="text" class="form-control" id="specialite" name="specialite" placeholder="specialité pour les medecin">
                                    </div>
+
                                    <div class="col-md-12 col-sm-12" style="padding-bottom:10px;">
-                                        <label for="telephone">Adresse complète</label>
+                                        <label for="adress">Adresse complète</label>
                                         <input type="tel" class="form-control" name="addres" placeholder="Adresse complète">
                                    </div>
                                    <div class="col-md-4 col-sm-4"  style="padding-bottom:10px;">
-                                        <label for="telephone">Région</label>
+                                        <label for="region">Région</label>
                                         <input type="tel" class="form-control" name="region" placeholder="Région ( Daira )">
                                    </div>
                                    <div class="col-md-4 col-sm-4"  style="padding-bottom:10px;">
-                                        <label for="telephone">Wilaya</label>
+                                        <label for="wilaya">Wilaya</label>
                                         <input type="tel" class="form-control" name="wilaya" placeholder="Wilaya ..">
                                    </div>
                                    <div class="col-md-4 col-sm-4"  style="padding-bottom:10px;">
@@ -213,7 +213,7 @@
                                    </div> 
                                    <div class="col-md-12 col-sm-12">
                                    </div> 
-                                   <button type="submit" class="btn btn-primary" name="register_btn" value="Register" style="margin-left:14px; width:50%;">S'inscrire</button>
+                                   <button type="submit" class="btn btn-primary" name="register_btn" value="Register" style="margin-left:14px; width:25%;float:right;">Enregistrer</button>
 				</div>
 				</form>
     </section>
@@ -222,6 +222,7 @@
 
 </div>
 
+    
     
      <!-- FOOTER -->
      <footer data-stellar-background-ratio="5" id="footer">
