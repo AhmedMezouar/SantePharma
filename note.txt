@@ -1,0 +1,21 @@
+------------------- La table disponibilité ----------------------
+CREATE TABLE `stock_med_pharmacie` (
+    `id_ph` int(3) NOT NULL,
+    `id_med` int(3) NOT NULL,
+    PRIMARY KEY (`id_ph`, `id_med`),
+    FOREIGN KEY (`id_ph`) REFERENCES `pharmacie`(`id_U`),
+    FOREIGN KEY (`id_med`) REFERENCES `medicament`(`ID`),
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-------------------- modification medicament.php --------------------
+
+- Ligne 141 
+    echo "<tr><td>".$ligne ["ID"]."</td><td>".$ligne ["DENOMINATION_COMMUNE_INTERNATIONALE"]."</td><td>".$ligne ["NOM_DE_MARQUE"]."</td><td>".$ligne ["DOSAGE"]."</td><td>".$ligne ["PAYS_DU_LABORATOIRE_DETENTEUR_DE_LA_DECISION_DENREGISTREMENT"]."</td><td><input type='checkbox' id=".$ligne ["ID"]." name='medDisponible[]' value='".$ligne ["ID"]."' aria-label='...'</td></tr>";
+- Ajouter les balises form avant foreach avec la method post
+- ajouter le bouton submit avec un lien vers listPharm.php pour pouvoir établir la recherche
+
+----------------- Pour finir ------------------------------------
+
+Ne pas oublier de faire le TEST
+
+-----------------------------------------------------------------------
