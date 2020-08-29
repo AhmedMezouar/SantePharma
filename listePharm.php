@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
 
-     <title>Liste des Pharmacies possedants le médicament</title>
+     <title>Liste des Pharmacies possedant le médicament</title>
 
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
