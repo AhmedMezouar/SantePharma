@@ -1,7 +1,10 @@
 <?php
-    include('connection.php');
+    include('connexion3.php');
+    echo "ooooook";
+
     $id_U = $_GET['id_U'];
     $query = "SELECT * FROM `user` WHERE `id_U` = '$id_U'; ";
+    echo "aaa";
     if(isset($_POST['accept'])) {
     if(count(fetchAll($query)) > 0){
         foreach(fetchAll($query) as $row){
@@ -20,7 +23,7 @@
             $region=$_POST['region'];
             $wilaya=$_POST['wilaya'];
             $specialite=$_POST['specialite'];
-            
+            echo "ooooook";
             if($PhaMed == 'Medecin') {
                 $query = "INSERT INTO `medecin` (nom, prenom, email, password, date, numAgre, numTel, sexe, choix,addres, region, wilaya, HOV, HOF, specialite) VALUES ('$nom', '$prenom', '$email', '$password', '$date', '$numAgre', '$numTel', '$sexe', '$PhaMed','$addres', '$region', '$wilaya','$HOV','$HOF','$specialite')";
             } else if ($PhaMed == 'Pharmacie') {

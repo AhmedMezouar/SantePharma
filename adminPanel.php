@@ -1,8 +1,4 @@
-<?php
-    session_start(); //we need session for the log in thingy XD 
-    include("connection.php");
-    
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,15 +23,16 @@
 
 </head>
 <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+     
 
-     <!-- PRE LOADER -->
+     <!-- PRE LOADER 
      <section class="preloader">
           <div class="spinner">
 
                <span class="spinner-rotate"></span>
                
           </div>
-     </section>
+     </section> -->
 
 
      <!-- HEADER 
@@ -110,35 +107,26 @@
                          </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                         <td scope="col">1</td>
-                         <td scope="col">Mezouar</td>
-                         <td scope="col">Ahmed</td>
-                         <td scope="col">26-09-1998</td>
-                         <td scope="col">ahmed.mezouar26@gmail.com</td>
-                         <th scope="col">Pharmacie</th>
-                         <td scope="col">
-                         <button type="button" class="btn btn-success" name="accept" value="accpet">Accept</button>
-                         <button type="button" class="btn btn-danger">Refusé</button>
-                         <!-- <a href="accept.php?id=<?php echo $row['id'] ?>" class="btn btn-primary my-2">Accept</a>
-                         <a href="reject.php?id=<?php echo $row['id'] ?>" class="btn btn-secondary my-2">Reject</a> -->
-                         </td>
-                    </tr>
-                    <!-- <?php
-                         //include("connection.php");
-                         //require_once('connection.php');
-                         //$query = "SELECT * FROM user";
-                         //$stat1 = $conn->query($query);
-                         //$tab1 = $stat1->fetchAll();
-                         //foreach($tab1 as $ligne)
+
+                     <?php
+                         include("connexion3.php");
+                         require_once('connexion3.php'); 
+
+                         $query = "SELECT * FROM user";
+                         echo $query;
+                         $stat = $conn->query($query);
+                         $tab = $stat->fetchAll();
+                         foreach($tab as $ligne)
                          {
-                         //  echo "<tr><td>".$ligne ["id_U"]."</td><td>".$ligne ["Nom"]."</td><td>".$ligne ["prenom"]."</td><td>".$ligne ["date"]."</td><td>".$ligne ["email"]."</td><td>".$ligne ["choix"]."</td></tr>";  
+                           echo "<tr><td>".$ligne ["id_U"]."</td><td>".$ligne ["Nom"]."</td><td>".$ligne ["prenom"]."</td><td>".$ligne ["date"]."</td><td>".$ligne ["email"]."</td><td>".$ligne ["choix"]."</td>
+                           <td><button type='button' name='accept' class='btn btn-success'>Accepter</button>
+                           <button type='button' name='refus' class='btn btn-danger'>Refusé</button></td></tr>";  
                          }
                     ?>   
 
                     </tbody>
                     </table>
-            </form> -->
+            </form> 
               </div>
             </div>
           </div>

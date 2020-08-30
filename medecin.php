@@ -134,7 +134,8 @@
                          <td>08:00 - 16:00</td>
                          <td>+2135 53 73 34 97 </td>
                          <td>ahmed.mezouar26@gmail.com</td>
-                    </tr> -->
+                    </tr> --> 
+
                     </tbody>
                     </table>
                </div>
@@ -173,4 +174,5 @@
      <script src="js/custom.js"></script>
 
 </body>
-</html>
+</html> 
+

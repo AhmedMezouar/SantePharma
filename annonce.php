@@ -1,6 +1,6 @@
 <?php 
 
-require_once('connection.php');
+require_once('connection3.php');
      if (isset($_POST['valid']))
      {
 

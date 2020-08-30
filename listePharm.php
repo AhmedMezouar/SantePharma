@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
 
-     <title>Liste des Pharmacies possedant le médicament</title>
+     <title>Liste des Pharmacies possedants le médicament</title>
 
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -22,18 +22,18 @@
 
      <!-- MAIN CSS -->
      <link rel="stylesheet" href="css/tooplate-style.css">
-
 </head>
+
 <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
 
-     <!-- PRE LOADER -->
+     <!-- PRE LOADER 
      <section class="preloader">
           <div class="spinner">
 
                <span class="spinner-rotate"></span>
                
           </div>
-     </section>
+     </section>-->
 
 
      <!-- MENU -->
@@ -95,13 +95,14 @@
      </section> 
      <div class="tab_def">
         <?php
-            include("connexion2.php");
+            include("connexion3.php");
             if (isset($_POST['search_med_btn']))
              {
                  $input=$_POST['searchB'];
-                 $query = "SELECT * FROM pharmacie where id_U in (SELECT distinct id_ph from stock_med_pharmacie where id_med in (SELECT distinct ID from medicament where DENOMINATION_COMMUNE_INTERNATIONALE = LIKE '%". $input ."%' or NOM_DE_MARQUE = LIKE '%". $input ."%'))";
+             //    $query = "SELECT * FROM pharmacie where id_U in (SELECT distinct id_ph from stock_med_pharmacie where id_med in (SELECT distinct ID from medicament where DENOMINATION_COMMUNE_INTERNATIONALE = LIKE '%". $input ."%' or NOM_DE_MARQUE = LIKE '%". $input ."%'))";
+             //    $query = "select * FROM user where id_U in (SELECT distinct id_U from user where id_U in (SELECT distinct ID from medicament where DENOMINATION_COMMUNE_INTERNATIONALE = LIKE '%". $input ."%' or NOM_DE_MARQUE = LIKE '%". $input ."%'))";
              } 
-            "<p>Dans ce tableau vous trouverez la liste des pharmacies qui ont en leur possesion les différents médicaments contenants le terme ".$input."</p>"
+            echo "<p>Dans ce tableau vous trouverez la liste des pharmacies qui ont en leur possesion les différents médicaments contenants le terme ".$input."</p>"
         ?>       
      </div>
      
@@ -118,6 +119,8 @@
           </thead>
           <tbody>
           <?php
+               include("connexion3.php");
+               $query = "select * FROM user where id_U in (SELECT distinct id_U from user where id_U in (SELECT distinct ID from medicament where DENOMINATION_COMMUNE_INTERNATIONALE = LIKE '%". $input ."%' or NOM_DE_MARQUE = LIKE '%". $input ."%'))";
                $stat = $conn->query($query);
                $tab = $stat->fetchAll();
                foreach($tab as $ligne)

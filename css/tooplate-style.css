@@ -683,6 +683,7 @@ input#search-bar:focus:-ms-placeholder {
     width: 70%; 
     margin-top: 25px !important;
     margin: auto; 
+    
   }
   .btn-primary1:hover {
     background: #3a61b6;
