@@ -147,6 +147,9 @@ ALTER TABLE `postuler`
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id_U`);
 
+ALTER TABLE `pharmacie`
+  ADD PRIMARY KEY (`id_U`);
+
 --
 -- AUTO_INCREMENT pour les tables déchargées
 --
