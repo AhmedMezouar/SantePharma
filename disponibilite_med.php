@@ -8,6 +8,7 @@
         $id_U = intval($id_U);
         $query = "INSERT INTO `stock_med_pharmacie` (id_ph, id_med)
         VALUES ('$id_U','$med');";
+        $conn->query($query);
     }  
 
     header("location: index.php");

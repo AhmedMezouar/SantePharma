@@ -103,8 +103,13 @@
                                         <div class="col-md-offset-1 col-md-10">
                                             <p id="defi">Besoin d’un médicament en particulier ? Vous ne l’avez trouvé nul part ? <br>
                                              Avec Santé Pharma, recherchez, trouvez et localisez le médicament dont vous avez besoin !</p>
-                                            <input class="form-control form-control-lg" type="text" placeholder="Rechercher un Medicament">
-                                             <a href="#" class="section-btn btn btn-default smoothScroll">Recherche</a> 
+                                             <form action="recherche.php" method="post">
+                                                  <input name="search" class="form-control form-control-lg" type="text" placeholder="Rechercher un Medicament">
+                                                  <button type="submit" class="section-btn btn btn-default smoothScroll">
+                                                       Recherche
+                                                  </button>
+                                             </form>
+                                            
                                              <!-- <h2 id="tit">Santé Pharma </h2>
                                              <p>Est un site web permettant de rechercher, localiser <br /> 
                                                   et consulter les différents services et produits<br /> 
