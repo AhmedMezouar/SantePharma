@@ -115,59 +115,73 @@
           <p>
                Dans ce tableau se trouvent les différents médicaments produits en Algérie. <br></p>
      </div>
-     <table class="table table-hover">
-        <thead style="background-color: #98ffdda2;">
-        <tr>
-              <th scope="col">#</th>
-              <th scope="col">DENOMINATION_COMMUNE_INTERNATIONALE</th>
-              <th scope="col">NOM_DE_MARQUE</th>
-              <th scope="col">DOSAGE</th>
-              <th scope="col">COND</th>
-              <th scope="col">PAYS_DU_LABORATOIRE</th>
-              <th scope="col">DUREE_DE_STABILITE</th>
-            </tr>
-        </thead>
-        <tbody>
-        <?php
-          include("connexion2.php");
-          $query = "select * from medicament";
-          $stat = $conn->query($query);
-          $tab = $stat->fetchAll();
-          foreach($tab as $ligne)
-          {
-               echo "<tr><td>".$ligne ["ID"]."</td><td>".$ligne ["DENOMINATION_COMMUNE_INTERNATIONALE"]."</td><td>".$ligne ["NOM_DE_MARQUE"]."</td><td>".$ligne ["DOSAGE"]."</td><td>".$ligne ["COND"]."</td><td>".$ligne ["PAYS_DU_LABORATOIRE_DETENTEUR_DE_LA_DECISION_DENREGISTREMENT"]."</td><td>".$ligne ["DUREE_DE_STABILITE"]."</td></tr>";  
-          }
-        ?>
-         <!-- <tr>
-              <th scope="row">1</th>
-              <td>LORATADINE</td>
-              <td>GELARTINE</td>
-              <td>10MG</td>
-              <td>B/30</td>
-              <td>ALGERIE</td>
-              <td>36 MOIS</td>
-        </tr>
-        <tr>
-              <th scope="row">2</th>
-              <td>LORATADINE</td>
-              <td>GELARTINE</td>
-              <td>10MG</td>
-              <td>B/30</td>
-              <td>ALGERIE</td>
-              <td>36 MOIS</td>
-        </tr>
-        <tr>
-              <th scope="row">3</th>
-              <td>LORATADINE</td>
-              <td>GELARTINE</td>
-              <td>10MG</td>
-              <td>B/30</td>
-              <td>ALGERIE</td>
-              <td>36 MOIS</td>
-        </tr> -->
-        </tbody>
-        </table>
-   
+     <form action="disponibilite_med.php" method="post">
+          <table class="table table-hover">
+               <thead style="background-color: #98ffdda2;">
+               <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">DENOMINATION_COMMUNE_INTERNATIONALE</th>
+                    <th scope="col">NOM_DE_MARQUE</th>
+                    <th scope="col">DOSAGE</th>
+                    <th scope="col">PAYS_DU_LABORATOIRE</th>
+                    <th scope="col">DISPONIBILITE</th>
+                    <th scope="col">DUREE_DE_STABILITE</th>
+                    </tr>
+               </thead>
+               <tbody>
+               <?php
+                    include("connexion3.php");
+                    $query = "select * from pharmacie";
+                    $stat = $conn->query($query);
+                    $tab = $stat->fetchAll();
+                    echo "<label for='cars'>Choisissez votre pharmacie</label>";
+                    echo "<select name='id_U'>";
+                    foreach($tab as $ligne)
+                    {
+                         echo "<option value='".$ligne ["id_U"]."'>".$ligne ["Nom"] ." " . $ligne ["prenom"] ."</option>";  
+                    }
+                    echo "</select>";
+                    $query = "select * from medicament";
+                    $stat = $conn->query($query);
+                    $tab = $stat->fetchAll();
+                    foreach($tab as $ligne)
+                    {
+                         echo "<tr><td>".$ligne ["ID"]."</td><td>".$ligne ["DENOMINATION_COMMUNE_INTERNATIONALE"]."</td><td>".$ligne ["NOM_DE_MARQUE"]."</td><td>".$ligne ["DOSAGE"]."</td><td>".$ligne ["PAYS_DU_LABORATOIRE_DETENTEUR_DE_LA_DECISION_DENREGISTREMENT"]."</td><td><input type='checkbox' id=".$ligne ["ID"]." name='medDisponible[]' value='".$ligne ["ID"]."' aria-label='...'</td></tr>";  
+                    }
+               ?>
+               <!-- <tr>
+                    <th scope="row">1</th>
+                    <td>LORATADINE</td>
+                    <td>GELARTINE</td>
+                    <td>10MG</td>
+                    <td>B/30</td>
+                    <td>ALGERIE</td>
+                    <td>36 MOIS</td>
+               </tr>
+               <tr>
+                    <th scope="row">2</th>
+                    <td>LORATADINE</td>
+                    <td>GELARTINE</td>
+                    <td>10MG</td>
+                    <td>B/30</td>
+                    <td>ALGERIE</td>
+                    <td>36 MOIS</td>
+               </tr>
+               <tr>
+                    <th scope="row">3</th>
+                    <td>LORATADINE</td>
+                    <td>GELARTINE</td>
+                    <td>10MG</td>
+                    <td>B/30</td>
+                    <td>ALGERIE</td>
+                    <td>36 MOIS</td>
+               </tr> -->
+               </tbody>
+          </table>
+          <button type="submit" class="btn btn-primary">
+               Sauvegarder
+          </button>
+     </form>
      <footer>
 
        <div>
