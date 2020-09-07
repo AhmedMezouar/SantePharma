@@ -93,7 +93,6 @@
                </p>
              </div> 
         </div>
-             <form  method="post" action="accept.php">
                <table class="table table-hover table-dark" style="width:100%">
                     <thead style="background:#999"> 
                          <tr>
@@ -103,7 +102,7 @@
                          <th scope="col">Date De Naissance</th>
                          <th scope="col">Email</th>
                          <th scope="col">Pha_Medecin</th>
-                         <th scope="col">Opération</th>
+                         <th scope="col" colspan="2">Opération</th>
                          </tr>
                     </thead>
                     <tbody>
@@ -113,20 +112,32 @@
                          require_once('connexion3.php'); 
 
                          $query = "SELECT * FROM user";
-                         echo $query;
                          $stat = $conn->query($query);
                          $tab = $stat->fetchAll();
                          foreach($tab as $ligne)
                          {
-                           echo "<tr><td>".$ligne ["id_U"]."</td><td>".$ligne ["Nom"]."</td><td>".$ligne ["prenom"]."</td><td>".$ligne ["date"]."</td><td>".$ligne ["email"]."</td><td>".$ligne ["choix"]."</td>
-                           <td><button type='button' name='accept' class='btn btn-success'>Accepter</button>
-                           <button type='button' name='refus' class='btn btn-danger'>Refusé</button></td></tr>";  
+                              echo "<tr><td>".$ligne ["id_U"]."</td><td>".$ligne ["Nom"]."</td><td>".$ligne ["prenom"]."</td><td>".$ligne ["date"]."</td><td>".$ligne ["email"]."</td><td>".$ligne ["choix"]."</td>
+                              <td>
+                                   <form  method='post' action='accept.php'>
+                                        <input type='number' name='id_U' value=".$ligne ["id_U"]." hidden>
+                                             <button type='submit' class='btn btn-success'>
+                                                  Accepter
+                                             </button>
+                                   </form>
+                              </td>
+                              <td>
+                                   <form  method='post' action='refus.php'>
+                                        <input type='number' name='id_U' value=".$ligne ["id_U"]." hidden>
+                                             <button type='submit' class='btn btn-danger'>
+                                                  Refuser
+                                             </button>
+                                   </form>
+                              </td></tr>";  
                          }
                     ?>   
-
+                    
                     </tbody>
                     </table>
-            </form> 
               </div>
             </div>
           </div>

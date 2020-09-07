@@ -1,44 +1,43 @@
 <?php
     include('connexion3.php');
-    echo "ooooook";
 
-    $id_U = $_GET['id_U'];
-    $query = "SELECT * FROM `user` WHERE `id_U` = '$id_U'; ";
-    echo "aaa";
-    if(isset($_POST['accept'])) {
-    if(count(fetchAll($query)) > 0){
-        foreach(fetchAll($query) as $row){
-            $nom=$_POST['nom'];
-            $prenom=$_POST['prenom'];
-            $email=$_POST['email'];
-            $password=$_POST['password']; 
-            $date=$_POST['date'];
-            $sexe=$_POST['sexe']; 
-            $numAgre=$_POST['numAgre']; 
-            $numTel=$_POST['numTel'];
-            $PhaMed=$_POST['choix'];
-            $HOV=$_POST['HOV'];
-            $HOF=$_POST['HOF'];
-            $addres=$_POST['addres'];
-            $region=$_POST['region'];
-            $wilaya=$_POST['wilaya'];
-            $specialite=$_POST['specialite'];
-            echo "ooooook";
-            if($PhaMed == 'Medecin') {
-                $query = "INSERT INTO `medecin` (nom, prenom, email, password, date, numAgre, numTel, sexe, choix,addres, region, wilaya, HOV, HOF, specialite) VALUES ('$nom', '$prenom', '$email', '$password', '$date', '$numAgre', '$numTel', '$sexe', '$PhaMed','$addres', '$region', '$wilaya','$HOV','$HOF','$specialite')";
-            } else if ($PhaMed == 'Pharmacie') {
-                $query = "INSERT INTO `pharmacie` (nom, prenom, email, password, date, numAgre, numTel, sexe, choix,addres, region, wilaya, HOV, HOF, specialite) VALUES ('$nom', '$prenom', '$email', '$password', '$date', '$numAgre', '$numTel', '$sexe', '$PhaMed','$addres', '$region', '$wilaya','$HOV','$HOF','$specialite')";
+    $id_U = $_POST['id_U'];
+    $query = "SELECT * FROM `user` WHERE `id_U` = '$id_U'";
+    $result = $conn->query($query);
+    if($result->rowCount() > 0){
+        while($row = $result->fetch(PDO::FETCH_ASSOC)){
+            $nom=$row['Nom'];
+            $prenom=$row['prenom'];
+            $email=$row['email'];
+            $password=$row['password']; 
+            $date=$row['date'];
+            $sexe=$row['Sexe']; 
+            $numAgre=$row['numAgre']; 
+            $numTel=$row['numTel'];
+            $PhaMed=$row['choix'];
+            $HOV=$row['HOV'];
+            $HOF=$row['HOF'];
+            $addres=$row['addres'];
+            $region=$row['region'];
+            $wilaya=$row['wilaya'];
+            $specialite=$row['specialite'];
+            if(strtolower($PhaMed) == 'medecin') {
+                $query = "INSERT INTO `medecin` (id_U, Nom, prenom, email, password, date, numAgre, numTel, Sexe, choix,addres, region, wilaya, HOV, HOF, specialite) VALUES ('$id_U', '$nom', '$prenom', '$email', '$password', '$date', '$numAgre', '$numTel', '$sexe', '$PhaMed','$addres', '$region', '$wilaya','$HOV','$HOF','$specialite')";
+                $conn->query($query);
+            } else if (strtolower($PhaMed) == 'pharmacie') {
+                $query = "INSERT INTO `pharmacie` (id_U, Nom, prenom, email, password, date, numAgre, numTel, Sexe, choix,addres, region, wilaya, HOV, HOF, specialite) VALUES ('$id_U', '$nom', '$prenom', '$email', '$password', '$date', '$numAgre', '$numTel', '$sexe', '$PhaMed','$addres', '$region', '$wilaya','$HOV','$HOF','$specialite')";
+                $conn->query($query);
             }
         }
-        $query .= "DELETE FROM `user` WHERE `user`.`id_U` = '$id_U';";
-        if(performQuery($query)){
+        $query = "DELETE FROM `user` WHERE `id_U` = '$id_U'";
+        $conn->query($query);
+        /*if(performQuery($query)){
             echo "Account has been accepted.";
         }else{
             echo "Unknown error occured. Please try again.";
-        }
+        }*/
     }else{
         echo "Error occured.";
     }
-}
     
 ?>
