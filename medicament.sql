@@ -26,7 +26,7 @@ ALTER TABLE `medicament`
   ADD PRIMARY KEY (`ID`);
 
 CREATE TABLE `stock_med_pharmacie` (
-    `id_ph` int(3) NOT NULL,
+    `id_ph` int(11) NOT NULL,
     `id_med` int(11) NOT NULL,
     PRIMARY KEY (`id_ph`, `id_med`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

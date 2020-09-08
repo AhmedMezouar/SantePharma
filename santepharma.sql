@@ -128,8 +128,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_U`, `Nom`, `prenom`, `date`, `email`, `password`, `Sexe`, `addres`, `region`, `wilaya`, `choix`, `specialite`, `HOV`, `HOF`, `numAgre`, `numTel`, `dateInsec`) VALUES
-(1, 'Mezouar', 'ahmed', '2019-05-07', 'ahmed.mezouar26@gmail.com', '123456', 'homme', 'cité azzouni rue 33 num 09', 'maghnia', 'tlemcen', 'Medecin', 'Generaliste', '07:00', '15:00', '25252525', '+213671205465', '2020-05-25 12:55:56'),
-(2, '', '', '0000-00-00', 'admin@gmail.com', 'admin', '', '', '', '', '', '', '', '', '', '', '2020-06-02 18:16:42');
+;
 
 --
 -- Index pour les tables déchargées
@@ -147,8 +146,8 @@ ALTER TABLE `postuler`
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id_U`);
 
-ALTER TABLE `pharmacie`
-  ADD PRIMARY KEY (`id_U`);
+  ALTER TABLE `pharmacie`
+    ADD PRIMARY KEY (`id_U`);
 
 --
 -- AUTO_INCREMENT pour les tables déchargées

@@ -125,7 +125,6 @@
                     <th scope="col">DOSAGE</th>
                     <th scope="col">PAYS_DU_LABORATOIRE</th>
                     <th scope="col">DISPONIBILITE</th>
-                    <th scope="col">DUREE_DE_STABILITE</th>
                     </tr>
                </thead>
                <tbody>
@@ -134,7 +133,7 @@
                     $query = "select * from pharmacie";
                     $stat = $conn->query($query);
                     $tab = $stat->fetchAll();
-                    echo "<label for='cars'>Choisissez votre pharmacie</label>";
+                    echo "<label for='cars' style='font-weight:bold; font-size:20px; width:70%; text-align:center; margin:auto; padding:15px;'>Choisissez votre pharmacie</label>";
                     echo "<select name='id_U'>";
                     foreach($tab as $ligne)
                     {

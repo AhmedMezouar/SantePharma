@@ -16,7 +16,7 @@ require_once('connection3.php');
           } */
           $sql = "INSERT INTO postuler(nom, email, phone,dateN, specialiste) VALUES ('$nom', '$email', '$phone', '$dateN', '$specialiste')";
           mysqli_query($con, $sql);
-          header ('location: medicament.php');
+          header ('location: listemedicam.php');
           $_SESSION ['message'] = "Votre demande a bien été transmise";
      }
 ?>

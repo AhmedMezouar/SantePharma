@@ -73,7 +73,7 @@
                     <ul class="nav navbar-nav navbar-right">
                          <li><a href="#top" class="smoothScroll">Accueil</a></li>
                          <li><a href="#about" class="smoothScroll">Sur SPharma</a></li>
-                         <li><a href="listemedicam.php" class="smoothScroll">Medicament</a></li>
+                         <li><a href="medicament.php" class="smoothScroll">Medicament</a></li>
                          <li><a href="#team" class="smoothScroll">Médecins</a></li>
                          <li><a href="#team1" class="smoothScroll">Laboratoire</a></li>
                          <li><a href="#footer" class="smoothScroll">Contact</a></li>
@@ -103,7 +103,7 @@
                                         <div class="col-md-offset-1 col-md-10">
                                             <p id="defi">Besoin d’un médicament en particulier ? Vous ne l’avez trouvé nul part ? <br>
                                              Avec Santé Pharma, recherchez, trouvez et localisez le médicament dont vous avez besoin !</p>
-                                             <form action="recherche.php" method="post">
+                                             <form action="rech.php" method="post">
                                                   <input name="search" class="form-control form-control-lg" type="text" placeholder="Rechercher un Medicament">
                                                   <button type="submit" class="section-btn btn btn-default smoothScroll">
                                                        Recherche
@@ -165,23 +165,30 @@
 
                     <div class="clearfix"></div>
 
-                    <div class="col-md-4 col-sm-6">
+                    <div class="col-md-4 col-sm-4">
                          <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
                               <img src="images/team-image1.jpg" class="img-responsive" alt="">
 
                                    <div class="team-info">
-                                        <h3>Nate Baston</h3>
-                                        <p>General Principal</p>
-                                        <div class="team-contact-info">
-                                             <p><i class="fa fa-phone"></i> 010-020-0120</p>
-                                             <p><i class="fa fa-envelope-o"></i> <a href="#">general@company.com</a></p>
-                                        </div>
-                                        <ul class="social-icon">
-                                             <li><a href="#" class="fa fa-linkedin-square"></a></li>
-                                             <li><a href="#" class="fa fa-envelope-o"></a></li>
-                                        </ul>
-                                   </div>
-
+                                   <?php 
+                                        include("connexion3.php");
+                                        $query = "select * from medecin WHERE `id_U`=1";
+                                        $stat = $conn->query($query);
+                                        $tab = $stat;
+                                        if ($tab->rowCount() > 0) {
+                                             while($row = $tab->fetch(PDO::FETCH_ASSOC)) {
+                                               echo "<h3>". $row["Nom"]." ". $row["prenom"]."</h3>";
+                                               echo "<p>". $row["specialite"]."</p>";
+                                               echo "                                   
+                                               <div class='team-contact-info'>
+                                               <p><i class='fa fa-phone'></i>". $row['numTel']."</p>
+                                               <p><i class='fa fa-envelope-o'></i> <a href='#'>". $row['email']."</a></p>
+                                               </div>
+                                               </div>";
+                                                  //print "Nom: " . $row["Nom"];
+                                        } 
+                                   }
+                                   ?>                                        
                          </div>
                     </div>
 
@@ -190,16 +197,26 @@
                               <img src="images/team-image2.jpg" class="img-responsive" alt="">
 
                                    <div class="team-info">
-                                        <h3>Jason Stewart</h3>
-                                        <p>Pregnancy</p>
-                                        <div class="team-contact-info">
-                                             <p><i class="fa fa-phone"></i> 010-070-0170</p>
-                                             <p><i class="fa fa-envelope-o"></i> <a href="#">pregnancy@company.com</a></p>
-                                        </div>
-                                        <ul class="social-icon">
-                                             <li><a href="#" class="fa fa-facebook-square"></a></li>
-                                             <li><a href="#" class="fa fa-envelope-o"></a></li>
-                                             <li><a href="#" class="fa fa-flickr"></a></li>
+                                   <?php 
+                                        include("connexion3.php");
+                                        $query = "select * from medecin WHERE `id_U`=2";
+                                        $stat = $conn->query($query);
+                                        $tab = $stat;
+                                        if ($tab->rowCount() > 0) {
+                                             while($row = $tab->fetch(PDO::FETCH_ASSOC)) {
+                                               echo "<h3>". $row["Nom"]." ". $row["prenom"]."</h3>";
+                                               echo "<p>". $row["specialite"]."</p>";
+                                               echo "                                   
+                                               <div class='team-contact-info'>
+                                               <p><i class='fa fa-phone'></i>". $row['numTel']."</p>
+
+                                               </div>";
+                                                  //print "Nom: " . $row["Nom"];                                                
+                                                  //<p><i class='fa fa-envelope-o'></i> <a href='#'>". $row['email']."</a></p>
+                                              // </div> 
+                                        } 
+                                   } 
+                                   ?>   
                                         </ul>
                                    </div>
 
@@ -211,16 +228,25 @@
                               <img src="images/team-image3.jpg" class="img-responsive" alt="">
 
                                    <div class="team-info">
-                                        <h3>Miasha Nakahara</h3>
-                                        <p>Cardiology</p>
-                                        <div class="team-contact-info">
-                                             <p><i class="fa fa-phone"></i> 010-040-0140</p>
-                                             <p><i class="fa fa-envelope-o"></i> <a href="#">cardio@company.com</a></p>
-                                        </div>
-                                        <ul class="social-icon">
-                                             <li><a href="#" class="fa fa-twitter"></a></li>
-                                             <li><a href="#" class="fa fa-envelope-o"></a></li>
-                                        </ul>
+                                   <?php 
+                                        include("connexion3.php");
+                                        $query = "select * from medecin WHERE `id_U`=1";
+                                        $stat = $conn->query($query);
+                                        $tab = $stat;
+                                        if ($tab->rowCount() > 0) {
+                                             while($row = $tab->fetch(PDO::FETCH_ASSOC)) {
+                                               echo "<h3>". $row["Nom"]." ". $row["prenom"]."</h3>";
+                                               echo "<p>". $row["specialite"]."</p>";
+                                               echo "                                   
+                                               <div class='team-contact-info'>
+                                               <p><i class='fa fa-phone'></i>". $row['numTel']."</p>
+                                               <p><i class='fa fa-envelope-o'></i> <a href='#'>". $row['email']."</a></p>
+                                               </div>
+                                               </div>";
+                                                  //print "Nom: " . $row["Nom"];
+                                        } 
+                                   }
+                                   ?> 
                                    </div>
 
                          </div>
@@ -305,7 +331,7 @@
 
                          </div>
                     </div>
-                   <button type="button" class="btn btn-primary2 btn-lg btn-block">Afficher La Liste Des Médecins de Laboratoire</button>
+                    <a href="laboratoire.php"><button type="button" class="btn btn-primary2 btn-lg btn-block">Afficher La Liste Des Médecins de Laboratoire</button>
                    <!-- <a href="#" class="section-btn1 btn btn-default smoothScroll">Recherche</a> -->
                </div>
           </div>

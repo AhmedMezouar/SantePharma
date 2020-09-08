@@ -27,12 +27,14 @@ if (isset($_POST['register_btn']))
 	$sql = "INSERT INTO user(nom, prenom, email, password, date, numAgre, numTel, sexe, choix,addres, region, wilaya, HOV, HOF, specialite) VALUES ('$nom', '$prenom', '$email', '$password', '$date', '$numAgre', '$numTel', '$sexe', '$PhaMed','$addres', '$region', '$wilaya','$HOV','$HOF','$specialite')";
      echo $sql;     
 	 mysqli_query($con, $sql);
-	 
+	
+	 header ("location: index.php");
+	 /*
 	if($PhaMed == 'Pharmacie') {
-		header ("location: medicament.php");//redirect to home page
+		header ("location: listemedicam.php");//redirect to home page
 	} else if ($PhaMed == 'Medecin') {
 		header ("location: medecin.php");
-	}
+	} */
 	/*
 }else{
 $_SESSION['message'] = "the two passwords do not match";

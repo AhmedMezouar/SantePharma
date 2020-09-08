@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-     <title>Medicament</title>
+     <title>Resultat de Rechercher</title>
 
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -24,13 +24,7 @@
 <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
 
      <!-- PRE LOADER -->
-     <section class="preloader">
-          <div class="spinner">
 
-               <span class="spinner-rotate"></span>
-               
-          </div>
-     </section>
 
 
      <!-- HEADER 
@@ -104,76 +98,48 @@
 
           </div>
      </section> 
-     <div class="tab_def">
-          <p>
-               Dans ce tableau se trouvent les différents médicaments produits en Algérie, <br>
-               Veuillez cocher les produits disponibles dans votre pharmacie.
-          </p>
-     </div>
-     
-     <table class="table">
+     <?php
+    include("connexion3.php");
+    
+      $input=$_POST['search'];
+     echo "<p style='font-weight:bold; font-size:20px; width:70%; text-align:center; margin:auto; padding:15px;'>Dans ce tableau vous trouverez la liste des pharmacies qui ont en leur possesion les différents médicaments contenants le terme \"".$input."\"</p>";
+        ?>
+    <div>
+    <table class="table">
           <thead>
             <tr>
-              <th scope="col">#</th>
-              <th scope="col">NOM_DE_MARQUE</th>
-              <th scope="col">DENOMINATION_COMMUNE_INTERNATIONALE</th>
-              <th scope="col">DOSAGE</th>
-              <th scope="col">PAYS_DU_LABORATOIRE</th>
+              <th scope="col">NOM</th>
+              <th scope="col">PRENOM</th>
+              <th scope="col">EMAIL</th>
+              <th scope="col">N ° TEL</th>
+              <th scope="col">ADDRES</th>
+              <th scope="col">REGION</th>
+              <th scope="col">WILAYA</th>
+
             </tr>
           </thead>
           <tbody>
-          <?php
-               include("connexion3.php");
-               $query = "select * from medicament";
-               $stat = $conn->query($query);
-               $tab = $stat->fetchAll();
-               foreach($tab as $ligne)
-               {
-                    echo "<tr><td>".$ligne ["ID"]."</td><td>".$ligne ["DENOMINATION_COMMUNE_INTERNATIONALE"]."</td><td>".$ligne ["NOM_DE_MARQUE"]."</td><td>".$ligne ["DOSAGE"]."</td><td>".$ligne ["PAYS_DU_LABORATOIRE_DETENTEUR_DE_LA_DECISION_DENREGISTREMENT"]."</td></tr>";  
-               }
-          ?>   
+    <?php
+    include("connexion3.php");
+    
+    if (isset($_POST['search'])){
+      $input=$_POST['search'];
+     // echo "<p>Dans ce tableau vous trouverez la liste des pharmacies qui ont en leur possesion les différents médicaments contenants le terme \"".$input."\"</p>";
+      $id_med = " SELECT * FROM `pharmacie` where `id_U` in (
+                  SELECT distinct `id_ph` from `stock_med_pharmacie` where `id_med` in (
+                  SELECT distinct `ID` from `medicament` where `DENOMINATION_COMMUNE_INTERNATIONALE` LIKE '%$input%' or `NOM_DE_MARQUE` LIKE '%$input%'))";
+      $result = $conn->query($id_med);
+      $id_med_list = array();
+      if ($result->rowCount() > 0) {
+        while($ligne = $result->fetch(PDO::FETCH_ASSOC)) {
+            echo "<tr><td>".$ligne ["Nom"]."</td><td>".$ligne ["prenom"]."</td><td>".$ligne ["email"]."</td><td>".$ligne ["numTel"]."</td><td>".$ligne ["addres"]."</td><td>".$ligne ["region"]."</td><td>".$ligne ["wilaya"]."</td></tr>";  
+        }
+      }
+    } 
+?> 
 
           </tbody>
-        </table>
+          </table>
 
-     <footer>
-
-       <div>
-          <div>
-                    <div class="col-md-12 col-sm-12 border-top">
-                         <div class="col-md-4 col-sm-6">
-                              <div class="copyright-text"> 
-                                   <p>Copyright &copy; 2020</p>
-                              </div>
-                         </div>
-                         <div class="col-md-6 col-sm-6">
-                              <div class="footer-link"> 
-                                   <a href="index.php">Recherche</a>
-                                   <a href="index.php">Médecins</a>
-                                   <a href="index.php">Laboratoire</a>
-                                   <a href="index.php">Demande Travail</a>
-                              </div>
-                         </div>
-                         <div class="col-md-2 col-sm-2 text-align-center">
-                              <div class="angle-up-btn"> 
-                                  <a href="#top" class="smoothScroll wow fadeInUp" data-wow-delay="1.2s"><i class="fa fa-angle-up"></i></a>
-                              </div>
-                         </div>   
-                    </div>
-                    
-               </div>
-          </div>
-     </footer>
-
-     <!-- SCRIPTS -->
-     <script src="js/jquery.js"></script>
-     <script src="js/bootstrap.min.js"></script>
-     <script src="js/jquery.sticky.js"></script>
-     <script src="js/jquery.stellar.min.js"></script>
-     <script src="js/wow.min.js"></script>
-     <script src="js/smoothscroll.js"></script>
-     <script src="js/owl.carousel.min.js"></script>
-     <script src="js/custom.js"></script>
-
-</body>
-</html>
+    </div>
+     </body>
