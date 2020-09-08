@@ -115,7 +115,7 @@
                     <tbody>
                          <?php
           include("connexion3.php");
-          $query = "select * from user";
+          $query = "select * from medecin";
           $stat = $conn->query($query);
           $tab = $stat->fetchAll();
           foreach($tab as $ligne)
