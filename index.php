@@ -77,6 +77,7 @@
                          <li><a href="laboratoire.php" class="smoothScroll">Liste des analyse</a></li>
                          <li><a href="#team" class="smoothScroll">Médecins</a></li>
                          <li><a href="#team1" class="smoothScroll">Laboratoire</a></li>
+                         <li><a href="postannonce.php" class="smoothScroll">Annonce</a></li>
                          <li><a href="#footer" class="smoothScroll">Contact</a></li>
                          <!-- <li class="appointment-btn"><a href="#appointment">Demande Travail</a></li> -->
                          <li class="appointment-btn1"><a href="compte.php">S'identifier</a></li>
@@ -231,7 +232,7 @@
                                    <div class="team-info">
                                    <?php 
                                         include("connexion3.php");
-                                        $query = "select * from medecin WHERE `id_U`=1";
+                                        $query = "select * from medecin WHERE `id_U`=3";
                                         $stat = $conn->query($query);
                                         $tab = $stat;
                                         if ($tab->rowCount() > 0) {
@@ -305,7 +306,7 @@
                                    <div class="team-info">
                                    <?php 
                                         include("connexion3.php");
-                                        $query = "select * from laboratoire WHERE `id_U`=1";
+                                        $query = "select * from laboratoire WHERE `id_U`=2";
                                         $stat = $conn->query($query);
                                         $tab = $stat;
                                         if ($tab->rowCount() > 0) {
@@ -335,7 +336,7 @@
                                    <div class="team-info">
                                    <?php 
                                         include("connexion3.php");
-                                        $query = "select * from laboratoire WHERE `id_U`=1";
+                                        $query = "select * from laboratoire WHERE `id_U`=3";
                                         $stat = $conn->query($query);
                                         $tab = $stat;
                                         if ($tab->rowCount() > 0) {
@@ -360,147 +361,6 @@
                </div>
           </div>
      </section>
-
-     <section id="team1" data-stellar-background-ratio="1">
-          <div class="container">
-               <div class="row">
-                                
-               <div class="col-md-6 col-sm-6">
-                         <div class="about-info">
-                              <h2 class="wow fadeInUp" data-wow-delay="0.1s">Postuler Les annonces </h2>
-                         </div>
-                    </div>
-
-                    <div class="clearfix"></div>
-
-                    <div class="col-md-4 col-sm-6">
-                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
-                         <img src="images/doAnaly2.jpg" class="img-responsive" alt="">
-
-                                   <div class="team-info">
-                                   <?php 
-                                        include("connexion3.php");
-                                        $query = "select * from postuler WHERE `id`=1";
-                                        $stat = $conn->query($query);
-                                        $tab = $stat;
-                                        if ($tab->rowCount() > 0) {
-                                             while($row = $tab->fetch(PDO::FETCH_ASSOC)) {
-                                               print "<h3>". $row["nom"]." ". $row["prenom"]."</h3>";
-                                               echo "                                   
-                                               <div class='team-contact-info'>
-                                               <p><i class='fa fa-phone'></i>". $row['email']."</p>
-                                               <p><i class='fa fa-envelope-o'></i>". $row['phone']."</p>
-                                               </div>
-                                               </div>";
-                                               echo "<h3 >". $row["specialiste"]."</h3>";
-                                                  //print "Nom: " . $row["Nom"];
-                                        } 
-                                   }
-                                   ?>                                        
-                         </div>
-                    </div>
-
-                         </div><div class="col-md-4 col-sm-6">
-                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
-                         <img src="images/doAnaly2.jpg" class="img-responsive" alt="">
-
-                                   <div class="team-info">
-                                   <?php 
-                                        include("connexion3.php");
-                                        $query = "select * from postuler WHERE `id`=2";
-                                        $stat = $conn->query($query);
-                                        $tab = $stat;
-                                        if ($tab->rowCount() > 0) {
-                                             while($row = $tab->fetch(PDO::FETCH_ASSOC)) {
-                                               echo "<h3>". $row["nom"]." ". $row["prenom"]."</h3>";
-                                               echo "                                   
-                                               <div class='team-contact-info'>
-                                               <p><i class='fa fa-phone'></i>". $row['email']."</p>
-                                               <p><i class='fa fa-envelope-o'></i>". $row['phone']."</p>
-                                               </div>
-                                               </div>";
-                                               echo "<h3 >". $row["specialiste"]."</h3>";
-                                                  //print "Nom: " . $row["Nom"];
-                                        } 
-                                   }
-                                   ?>                                        
-                         </div>
-                    </div>
-
-                         </div>
-                         
-                    </div>
-          </div>
-     </section>
-     <!-- MAKE AN APPOINTMENT 
-     <section id="appointment" data-stellar-background-ratio="3">
-          <div class="container">
-               <div class="row">
-
-                    <div class="col-md-6 col-sm-6">
-                         <img src="images/appointment-image.jpg" class="img-responsive" alt="">
-                    </div>
-
-                    <div class="col-md-6 col-sm-6">
-                          CONTACT FORM HERE 
-                         <form id="appointment-form" role="form" method="post" action="#">
-
-                               SECTION TITLE 
-                              <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
-                                   <h2>Demande De Travaille</h2>
-                              </div>
-
-                              <div class="wow fadeInUp" data-wow-delay="0.8s">
-                                   <div class="col-md-6 col-sm-6">
-                                        <label for="name">Nom</label>
-                                        <input type="text" class="form-control" id="name" name="name" placeholder="Nom Prénom">
-                                   </div>
-
-                                   <div class="col-md-6 col-sm-6">
-                                        <label for="email">Email</label>
-                                        <input type="email" class="form-control" id="email" name="email" placeholder="Votre Email">
-                                   </div>
-
-                                   <div class="col-md-6 col-sm-6">
-                                        <label for="date">Date de Naissance</label>
-                                        <input type="date" name="date" value="" class="form-control">
-                                   </div>
-
-                                   <div class="col-md-6 col-sm-6">
-                                        <label for="select">Séléctionner votre Spécialité</label>
-                                        <select class="form-control">
-                                             <option>Les Deux </option>
-                                             <option>Infirmier </option>
-                                             <option>Vendeur (se) Pharmacie</option>
-                                        </select>
-                                   </div>
-
-                                   <div class="col-md-12 col-sm-12">
-                                        <label for="telephone">Némuro Téléphone</label>
-                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Némuro De Téléphone ">
-                                        <label for="Message">Commentaire : </label>
-                                        <textarea class="form-control" rows="5" id="message" name="message" placeholder="Message"></textarea>
-                                        <button type="submit" class="form-control" id="cf-submit" name="submit">Valaide</button>
-                                   </div>
-                              </div>
-                        </form>
-                    </div>
-
-               </div>
-          </div>
-     </section> -->
-
-
-     <!-- GOOGLE MAP -->
-     <!--<section id="google-map">
-     <!-- How to change your own map point
-            1. Go to Google Maps
-            2. Click on your location point
-            3. Click "Share" and choose "Embed map" tab
-            4. Copy only URL and paste it within the src="" field below
-	-->
-        <!--  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.3030413476204!2d100.5641230193719!3d13.757206847615207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf51ce6427b7918fc!2sG+Tower!5e0!3m2!1sen!2sth!4v1510722015945" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
-     </section> -->          
 
 
      <!-- FOOTER -->

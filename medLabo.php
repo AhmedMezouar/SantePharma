@@ -56,6 +56,7 @@
                          <li><a href="laboratoire.php" class="smoothScroll">Liste des analyse</a></li>
                          <li><a href="medecin.php" class="smoothScroll">Médecins</a></li>
                          <li><a href="medLabo.php" class="smoothScroll">Laboratoire</a></li>
+                         <li><a href="postannonce.php" class="smoothScroll">Annonce</a></li>
                          <li><a href="#footer" class="smoothScroll">Contact</a></li>
                          <!-- <li class="appointment-btn"><a href="#appointment">Demande Travail</a></li> -->
                          <li class="appointment-btn1"><a href="compte.php" style="background:#ce2f2f; color:white;">S'identifier</a></li>

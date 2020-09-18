@@ -58,7 +58,7 @@
                          <li><a href="#team1" class="smoothScroll">Laboratoire</a></li>
                          <li><a href="#footer" class="smoothScroll">Contact</a></li>
                          <!-- <li class="appointment-btn"><a href="#appointment">Demande Travail</a></li> -->
-                         <li class="appointment-btn1"><a href="identifier.php">S'identifier</a></li>
+                         <li class="appointment-btn1"><a href="compte.php">S'identifier</a></li>
 
                     </ul>
                </div>
@@ -102,53 +102,32 @@
                          </div>
                     </div>
                     <div class="row">
-                         <div class="col-sm-6">
+                         <div class="col-sm-12" style="padding: 50px;">
                          	<div class="card">
                               <div class="card-body">
-                              <h5 class="card-title">Special title treatment</h5>
-                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                              <?php 
+                                        include("connexion3.php");
+                                        $query = "select * from postuler";
+                                        $stat = $conn->query($query);
+                                        $tab = $stat;
+                                        if ($tab->rowCount() > 0) {
+                                             while($row = $tab->fetch(PDO::FETCH_ASSOC)) {
+                                               print "<h3>". $row["nom"]." ". $row["prenom"]."</h3>";
+                                               echo "                                   
+                                               <div class='team-contact-info'>
+                                               <p><i class='fa fa-phone'></i>". $row['email']."</p>
+                                               <p><i class='fa fa-envelope-o'></i>". $row['phone']."</p>
+                                               </div>
+                                               </div>";
+                                               echo "<h3 >". $row["specialiste"]."</h3>";
+                                               echo "<p>".$row["dateCreation"]."</p>";
+                                               echo "<a  href='index.php'><button type='button' class='btn btn-primary'>Postuler</button>";
+                                        } 
+                                   }
+                                   ?>  
                               </div>
                         	</div>
                          </div> 
-
-                         <div class="col-sm-6">
-                         	<div class="card">
-                              <div class="card-body">
-                              <h5 class="card-title">Special title treatment</h5>
-                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                              <a href="#" class="btn btn-primary">Go somewhere</a>
-                              </div>
-                        	</div>
-                         </div> 
-                         <div class="col-sm-6">
-                         	<div class="card">
-                              <div class="card-body">
-                              <h5 class="card-title">Special title treatment</h5>
-                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                              <a href="#" class="btn btn-primary">Go somewhere</a>
-                              </div>
-                        	</div>
-                         </div> 
-                         <div class="col-sm-6">
-                         	<div class="card">
-                              <div class="card-body">
-                              <h5 class="card-title">Special title treatment</h5>
-                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                              <a href="#" class="btn btn-primary">Go somewhere</a>
-                              </div>
-                        	</div>
-                         </div> 
-                         <div class="col-sm-6">
-                         	<div class="card">
-                              <div class="card-body">
-                              <h5 class="card-title">Special title treatment</h5>
-                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                              <a href="#" class="btn btn-primary">Go somewhere</a>
-                              </div>
-                        	</div>
-                         </div> 
-                   
 
                </div>
           </div>

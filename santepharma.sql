@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : ven. 18 sep. 2020 à 13:55
+-- Généré le : ven. 18 sep. 2020 à 17:38
 -- Version du serveur :  10.4.11-MariaDB
 -- Version de PHP : 7.4.4
 
@@ -144,6 +144,16 @@ CREATE TABLE `laboratoire` (
   `accept` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Déchargement des données de la table `laboratoire`
+--
+
+INSERT INTO `laboratoire` (`id_U`, `Nom`, `prenom`, `date`, `email`, `password`, `Sexe`, `addres`, `region`, `wilaya`, `choix`, `specialite`, `HOV`, `HOF`, `numAgre`, `numTel`, `dateInsec`, `accept`) VALUES
+(1, 'AIT DJEBBARA', 'Malek', '1975-05-05', 'ait.malek@gmail.com', '123456', 'homme', '31, Boulevard M. Ben Boulaid', 'Alger-Centre', 'Alger', 'laboratoire', '', '07:00', '15:00', '1234567', '021 73 83 80', '2020-09-18 15:02:35', 0),
+(2, 'BOUKHTOUCHE', 'Ammar', '1964-02-22', 'boukhatouche.ammar@gmail.com', '123456', 'homme', '10 Boulevard Mohamed khemisti', 'Alger-Centre', 'Alger', 'laboratoire', '', '06:00', '18:00', '1234567', '021 63 24 47', '2020-09-18 15:11:05', 0),
+(3, 'FLIDJ', 'Abdelahafid', '1970-06-06', 'flidj.abdelh@gmail.com', '123456', 'homme', 'Cité cadi ', 'Maghnia', 'Tlemcen', 'laboratoire', '', '08:00', '18:00', '25252525', '043 50 67 58', '2020-09-18 15:11:06', 0),
+(18, 'KHELILKA', 'Ahmed', '1970-12-25', 'khedlilka.ahmed@gmail.com', '123456', 'homme', 'Rue 29 Unnamed ', 'Ghazaouet', 'Tlemcen', 'laboratoire', '', '08:00', '18:00', '25252525', '043 41 25 98', '2020-09-18 15:32:32', 0);
+
 -- --------------------------------------------------------
 
 --
@@ -170,6 +180,17 @@ CREATE TABLE `medecin` (
   `dateInsec` timestamp NOT NULL DEFAULT current_timestamp(),
   `accept` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `medecin`
+--
+
+INSERT INTO `medecin` (`id_U`, `Nom`, `prenom`, `date`, `email`, `password`, `Sexe`, `addres`, `region`, `wilaya`, `choix`, `specialite`, `HOV`, `HOF`, `numAgre`, `numTel`, `dateInsec`, `accept`) VALUES
+(1, 'TAIBI', 'Assyr', '1960-06-20', 'taibi.assyr@gmail.com', '123456', 'homme', '13 rue de mostaganem', 'mostaganem', 'mostaganem', 'Medecin', 'Neurologue', '08:00', '18:00', '27 27 27 27', '041 29 50 50', '2020-09-18 12:51:47', 0),
+(2, 'GUITOUNI', 'Abdelkrim', '1965-11-25', 'guitouni.abdelkrim@gmail.com', '123456', 'homme', '9,Rue Ibn Rochd les Abattoirs', 'Maghnia', 'Tlemcen', 'Medecin', 'Cardiologue', '09:00', '17:00', '145698732', '043 31 69 23', '2020-09-18 12:52:58', 0),
+(3, 'LERERI', 'Rabiha Sabrina', '1975-03-30', 'lereri.sabrina@gmail.com', '123456', 'femme', 'lot n° 34 Robert', 'Bouzareah', 'Alger', 'Medecin', 'Dermatologie', '09:00', '16:00', '16 16 16 16 16', '05 55 40 61 11', '2020-09-18 12:52:47', 0),
+(4, 'BOUTABBA', 'Salim Riad', '1968-11-18', 'boutabba.salim@gmail.com', '123456', 'homme', 'Rue LAACHAR ALI N°6 07360 LICHANA', 'Lichana', 'Biskra', 'Medecin', 'Médecin Général', '06:00', '13:00', '33 33 33 33', '033 77 53 04', '2020-09-18 12:54:46', 0),
+(11, 'LEMRINI', 'Ahmed', '1952-09-10', 'lemrini.ahmed@gmail.com', '123456', 'homme', '284 Cité rénovation Matmor', 'Maghnia', 'TLEMCEN', 'Medecin', 'Pneumo-Phtisiologue', '10:00', '16:00', '25478113', '043 30 42 98', '2020-09-18 12:54:48', 0);
 
 -- --------------------------------------------------------
 
@@ -4885,6 +4906,15 @@ CREATE TABLE `pharmacie` (
   `accept` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Déchargement des données de la table `pharmacie`
+--
+
+INSERT INTO `pharmacie` (`id_U`, `Nom`, `prenom`, `date`, `email`, `password`, `Sexe`, `addres`, `region`, `wilaya`, `choix`, `specialite`, `HOV`, `HOF`, `numAgre`, `numTel`, `dateInsec`, `accept`) VALUES
+(7, 'BOUALI ', 'Mohamed', '1971-02-25', 'bouali.mohamed@yahoo.com', '123456', 'homme', 'Rue des frere Ayad n 03 ', 'Remchi', 'Tlemcen', 'Pharmacie', '', '08:00', '19:00', '789654132', '043 48 35 66', '2020-09-18 12:52:54', 0),
+(8, 'BOUGHALEM', 'Fouad', '1956-08-12', 'boughalem.fouad@gmail.com', '123456', 'homme', 'Cite les Oliviers, section 204 groupe de propriete 18  ', 'Maghnia', 'Tlemcen', 'Pharmacie', '', '08:00', '19:00', '14 12 35 65', '043 48 35 69', '2020-09-18 12:52:53', 0),
+(9, 'LAHOUEL ', 'Fatima', '1980-09-10', 'lahouel.fatima@hotmail.com', '123456', 'femme', 'Lotissement Sidi Hadj Bahous EL BAYADH', 'El Bayadh', 'El bayadh', 'Pharmacie', '', '09:00', '19:00', '32 233 3232 32', '049 41 52 89', '2020-09-18 12:52:53', 0);
+
 -- --------------------------------------------------------
 
 --
@@ -4901,6 +4931,15 @@ CREATE TABLE `postuler` (
   `phone` varchar(15) NOT NULL,
   `dateCreation` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `postuler`
+--
+
+INSERT INTO `postuler` (`id`, `nom`, `prenom`, `email`, `dateN`, `specialiste`, `phone`, `dateCreation`) VALUES
+(1, 'MAHDI', 'Mohamed', 'mahdi.mahmoud@gmail.com', '1980-09-18', 'infirmier', '021 27 58 62', '2020-09-18 16:16:16'),
+(2, 'chaabnia', 'Ferial', 'chaabinia.ferial@gmail.com', '1970-02-10', 'Vendeur Pharmacie', '021 23 25 12', '2020-09-18 16:19:55'),
+(3, 'bekhtouche', 'ammar', 'bekhtouche.ammar@gmail.com', '1964-02-22', 'Docteur D\'analyse', '021 63 24 47', '2020-09-18 16:20:36');
 
 -- --------------------------------------------------------
 
@@ -4972,18 +5011,24 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_U`, `Nom`, `prenom`, `date`, `email`, `password`, `Sexe`, `addres`, `region`, `wilaya`, `choix`, `specialite`, `HOV`, `HOF`, `numAgre`, `numTel`, `dateInsec`, `accept`) VALUES
-(1, 'TAIBI', 'Assyr', '1960-06-20', 'taibi.assyr@gmail.com', '123456', 'homme', '13 rue de mostaganem', 'mostaganem', 'mostaganem', 'Medecin', 'Neurologue', '08:00', '18:00', '27 27 27 27', '041 29 50 50', '2020-09-18 10:49:20', 0),
+(1, 'TAIBI', 'Assyr', '1960-06-20', 'taibi.assyr@gmail.com', '123456', 'homme', '13 rue de mostaganem', 'mostaganem', 'mostaganem', 'Medecin', 'Neurologue', '08:00', '18:00', '27 27 27 27', '041 29 50 50', '2020-09-18 10:49:20', 1),
 (2, 'MAHDI', 'Mahmoud', '1980-09-18', 'mahdi.mahmoud@gmail.com', '123456', 'homme', '44 cité Diar Essaadabt L ESC 2 N° 02', 'El Madania', 'Alger', 'Medecin', 'Médecin INTERNE', '08:00', '18:00', '16 16 16 16 ', '021 27 58 62', '2020-09-18 10:53:51', 0),
-(3, 'LERERI', 'Rabiha Sabrina', '1975-03-30', 'lereri.sabrina@gmail.com', '123456', 'femme', 'lot n° 34 Robert', 'Bouzareah', 'Alger', 'Medecin', 'Dermatologie', '09:00', '16:00', '16 16 16 16 16', '05 55 40 61 11', '2020-09-18 10:56:28', 0),
-(4, 'BOUTABBA', 'Salim Riad', '1968-11-18', 'boutabba.salim@gmail.com', '123456', 'homme', 'Rue LAACHAR ALI N°6 07360 LICHANA', 'Lichana', 'Biskra', 'Medecin', 'Médecin Général', '06:00', '13:00', '33 33 33 33', '033 77 53 04', '2020-09-18 11:01:56', 0),
+(3, 'LERERI', 'Rabiha Sabrina', '1975-03-30', 'lereri.sabrina@gmail.com', '123456', 'femme', 'lot n° 34 Robert', 'Bouzareah', 'Alger', 'Medecin', 'Dermatologie', '09:00', '16:00', '16 16 16 16 16', '05 55 40 61 11', '2020-09-18 10:56:28', 1),
+(4, 'BOUTABBA', 'Salim Riad', '1968-11-18', 'boutabba.salim@gmail.com', '123456', 'homme', 'Rue LAACHAR ALI N°6 07360 LICHANA', 'Lichana', 'Biskra', 'Medecin', 'Médecin Général', '06:00', '13:00', '33 33 33 33', '033 77 53 04', '2020-09-18 11:01:56', 1),
 (5, 'CHAABNIA', 'Ferial', '1986-05-12', 'chaabnia.ferial@yahoo.fr', '123456', 'femme', 'Cité 488 lofts bt n°1 et 2 Bachdjarrah', 'Alger-centre', 'Alger', 'Pharmacie', '', '06:00', '23:00', '159487263', '021 23 25 12', '2020-09-18 11:10:41', 0),
 (6, 'BENAOUDA', 'Nawel', '1970-02-10', 'benaouda.nawel@hotmail.com', '123456', 'femme', 'Rue N46 sidi Yahya', 'Sidi medjahed', 'Tlemcen', 'Pharmacie', '', '07:00', '20:00', '13 13 13 13 13', '0655 33 30 62', '2020-09-18 11:19:11', 0),
-(7, 'BOUALI ', 'Mohamed', '1971-02-25', 'bouali.mohamed@yahoo.com', '123456', 'homme', 'Rue des frere Ayad n 03 ', 'Remchi', 'Tlemcen', 'Pharmacie', '', '08:00', '19:00', '789654132', '043 48 35 66', '2020-09-18 11:25:41', 0),
-(8, 'BOUGHALEM', 'Fouad', '1956-08-12', 'boughalem.fouad@gmail.com', '123456', 'homme', 'Cite les Oliviers, section 204 groupe de propriete 18  ', 'Maghnia', 'Tlemcen', 'Pharmacie', '', '08:00', '19:00', '14 12 35 65', '043 48 35 69', '2020-09-18 11:28:37', 0),
-(9, 'LAHOUEL ', 'Fatima', '1980-09-10', 'lahouel.fatima@hotmail.com', '123456', 'femme', 'Lotissement Sidi Hadj Bahous EL BAYADH', 'El Bayadh', 'El bayadh', 'Pharmacie', '', '09:00', '19:00', '32 233 3232 32', '049 41 52 89', '2020-09-18 11:32:52', 0),
+(7, 'BOUALI ', 'Mohamed', '1971-02-25', 'bouali.mohamed@yahoo.com', '123456', 'homme', 'Rue des frere Ayad n 03 ', 'Remchi', 'Tlemcen', 'Pharmacie', '', '08:00', '19:00', '789654132', '043 48 35 66', '2020-09-18 11:25:41', 1),
+(8, 'BOUGHALEM', 'Fouad', '1956-08-12', 'boughalem.fouad@gmail.com', '123456', 'homme', 'Cite les Oliviers, section 204 groupe de propriete 18  ', 'Maghnia', 'Tlemcen', 'Pharmacie', '', '08:00', '19:00', '14 12 35 65', '043 48 35 69', '2020-09-18 11:28:37', 1),
+(9, 'LAHOUEL ', 'Fatima', '1980-09-10', 'lahouel.fatima@hotmail.com', '123456', 'femme', 'Lotissement Sidi Hadj Bahous EL BAYADH', 'El Bayadh', 'El bayadh', 'Pharmacie', '', '09:00', '19:00', '32 233 3232 32', '049 41 52 89', '2020-09-18 11:32:52', 1),
 (10, 'MAHMOUDI ', 'Mohammed Amine', '0000-00-00', 'mahmoudi.amine@gmail.com', '123456', 'homme', 'Rue du 1er Novembre cite Guermouche Sebdou ', 'Sebdou', 'Tlemcen', 'Pharmacie', '', '09:00', '20:00', '132568874', '043 5 96 87', '2020-09-18 11:34:20', 0),
-(11, 'LEMRINI', 'Ahmed', '1952-09-10', 'lemrini.ahmed@gmail.com', '123456', 'homme', '284 Cité rénovation Matmor', 'Maghnia', 'TLEMCEN', 'Medecin', 'Pneumo-Phtisiologue', '10:00', '16:00', '25478113', '043 30 42 98', '2020-09-18 11:45:08', 0),
-(12, 'ZEMIRLI', 'Tani Seif', '1964-04-04', 'zemirli.seif@yahoo.com', '123456', 'homme', 'Haï bassin résidence larabi', 'Tlemcen', 'Tlemcen', 'Medecin', 'Médecin Rééducateur', '08:00', '15:00', '1326549852', '043 21 06 69', '2020-09-18 11:54:52', 0);
+(11, 'LEMRINI', 'Ahmed', '1952-09-10', 'lemrini.ahmed@gmail.com', '123456', 'homme', '284 Cité rénovation Matmor', 'Maghnia', 'TLEMCEN', 'Medecin', 'Pneumo-Phtisiologue', '10:00', '16:00', '25478113', '043 30 42 98', '2020-09-18 11:45:08', 1),
+(12, 'ZEMIRLI', 'Tani Seif', '1964-04-04', 'zemirli.seif@yahoo.com', '123456', 'homme', 'Haï bassin résidence larabi', 'Tlemcen', 'Tlemcen', 'Medecin', 'Médecin Rééducateur', '08:00', '15:00', '1326549852', '043 21 06 69', '2020-09-18 11:54:52', 0),
+(13, 'GUITOUNI', 'Abdelkrim', '1965-11-25', 'guitouni.abdelkrim@gmail.com', '123456', 'homme', '9,Rue Ibn Rochd les Abattoirs', 'Maghnia', 'Tlemcen', 'Medecin', 'Cardiologue', '09:00', '17:00', '145698732', '043 31 69 23', '2020-09-18 12:00:59', 1),
+(14, 'AIT DJEBBARA', 'Malek', '1975-05-05', 'ait.malek@gmail.com', '123456', 'homme', '31, Boulevard M. Ben Boulaid', 'Alger-Centre', 'Alger', 'laboratoire', '', '07:00', '15:00', '1234567', '021 73 83 80', '2020-09-18 14:56:19', 1),
+(15, 'admin', 'admin', '0000-00-00', 'admin@gmail.com', 'admin', 'homme', '', '', '', '', '', 'Heure ', 'Heure ', '', '', '2020-09-18 15:00:12', 1),
+(16, 'BOUKHTOUCHE', 'Ammar', '1964-02-22', 'boukhatouche.ammar@gmail.com', '123456', 'homme', '10 Boulevard Mohamed khemisti', 'Alger-Centre', 'Alger', 'laboratoire', '', '06:00', '18:00', '1234567', '021 63 24 47', '2020-09-18 15:04:53', 1),
+(17, 'FLIDJ', 'Abdelahafid', '1970-06-06', 'flidj.abdelh@gmail.com', '123456', 'homme', 'Cité cadi ', 'Maghnia', 'Tlemcen', 'laboratoire', '', '08:00', '18:00', '25252525', '043 50 67 58', '2020-09-18 15:10:16', 1),
+(18, 'KHELILKA', 'Ahmed', '1970-12-25', 'khedlilka.ahmed@gmail.com', '123456', 'homme', 'Rue 29 Unnamed ', 'Ghazaouet', 'Tlemcen', 'laboratoire', '', '08:00', '18:00', '25252525', '043 41 25 98', '2020-09-18 15:32:25', 1);
 
 --
 -- Index pour les tables déchargées
@@ -5059,25 +5104,25 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour la table `medecin`
 --
 ALTER TABLE `medecin`
-  MODIFY `id_U` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_U` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT pour la table `pharmacie`
 --
 ALTER TABLE `pharmacie`
-  MODIFY `id_U` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_U` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT pour la table `postuler`
 --
 ALTER TABLE `postuler`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_U` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_U` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- Contraintes pour les tables déchargées

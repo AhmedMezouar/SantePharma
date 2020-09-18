@@ -79,6 +79,7 @@
                          <li><a href="laboratoire.php" class="smoothScroll">Liste des analyse</a></li>
                          <li><a href="index.php" class="smoothScroll">Médecins</a></li>
                          <li><a href="index.php" class="smoothScroll">Laboratoire</a></li>
+                         <li><a href="postannonce.php" class="smoothScroll">Annonce</a></li>
                          <li><a href="#google-map" class="smoothScroll">Contact</a></li> 
                          <li class="appointment-btn1"><a href="compte.php">S'identifier</a></li>
  <!--

@@ -123,7 +123,16 @@
                     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mot de passe" name=Password>
                <!--     <small id="emailHelp" class="form-text text-muted"  >Nous ne partagerons jamais votre e-mail avec quelqu'un d'autre.</small> -->
                   </div>
-                  <button type="submit" class="btn btn-primary" name="connect">Connecter</button>
+                  <div class="from-group" style="padding-bottom:10px;">
+                                        <label for="select">Tu es : </label>
+                                        <select class="form-control" name="choix">
+                                             <option value="admin">Admin </option>
+                                             <option value="Pharmacie">Pharmacie </option>
+                                             <option value="Medecin">Médecin </option>
+                                             <option value="laboratoire">Laboratoire </option>
+                                        </select>
+                                   </div>
+                  <button type="submit" class="btn btn-primary from-group" name="connect">Connecter</button>
                 </form>
             </div>
         </section>

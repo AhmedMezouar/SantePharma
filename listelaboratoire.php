@@ -117,7 +117,7 @@
      </div>
      <form action="disponibilite_analyse.php" method="post">
           <table class="table table-hover">
-               <thead style="background-color: #98ffdda2;">
+               <thead style="background-color: #ce2f2f; color: white">
                <tr>
                     <th scope="col">#</th>
                     <th scope="col">NOM DE L'ANALYSE</th>

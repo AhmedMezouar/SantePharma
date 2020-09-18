@@ -36,7 +36,8 @@
             }
         }
         $query = "UPDATE `user` SET accept=1 WHERE `id_U` = '$id_U';";
-        $conn->query($query);
+        $conn->query($query); 
+        header ("location: adminPanel.php");
         /*if(performQuery($query)){
             echo "Account has been accepted.";
         }else{

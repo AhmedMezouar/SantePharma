@@ -17,6 +17,6 @@ require_once('connection.php');
           } */
           $sql = "INSERT INTO postuler (nom, prenom, email, dateN, specialiste, phone) VALUES ('$nom','$prenom', '$email', '$dateN', '$specialiste', '$phone')";
           mysqli_query($con, $sql);
-          header ('location: index.php');
+          header ('location: demandeTrav.php');
      }
 ?>

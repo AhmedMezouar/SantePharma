@@ -82,17 +82,13 @@
                          <li><a href="index.php" class="smoothScroll">Laboratoire</a></li>
                          <li><a href="#google-map" class="smoothScroll">Contact</a></li> 
                          <li class="nav-item dropdown">
-                              <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-                                   <div class="btn-group" role="group">
-                                     <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                       Profile
-                                     </button>
-                                     <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                                       <a class="dropdown-item" href="#">Gérer Profile</a>
-                                       <a class="dropdown-item" href="#">Demande de travail</a>
-                                     </div>
-                                   </div>
-                                 </div>
+                              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Profile</a>
+                              <div class="dropdown-menu">
+                                   <a class="dropdown-item" href="gererprofile.php">Gérer Profile</a>
+                                   <a class="dropdown-item" href="demandeTrav.php">Demande_travail</a>
+                                   <div class="dropdown-divider"></div>
+                                   <a class="dropdown-item" href="index.php">Déconnexion</a>
+                              </div>
                          </li>
 
 <!--                         <li class="appointment-btn1"><a href="#appointment">S'identifier</a></li> -->
@@ -147,8 +143,8 @@
                                         <select class="form-control" name="specialiste">
                                              <option value="">Choisi votre spécialité </option>
                                              <option value="infirmier">Infirmier </option>
-                                             <option value="pharma">Vendeur (se) Pharmacie</option>
-                                             <option value="dAnalyse">Docteur D'analyse</option>
+                                             <option value="Vendeur Pharmacie">Vendeur (se) Pharmacie</option>
+                                             <option value="Docteur D'analyse">Docteur D'analyse</option>
                                         </select>
                                    </div>
 
