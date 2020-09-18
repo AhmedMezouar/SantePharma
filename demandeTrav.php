@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 
-     <title>Demande De Travail</title>
+     <title>Demande de travail</title>
 
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -76,10 +76,11 @@
                     <ul class="nav navbar-nav navbar-right">
                          <li><a href="index.php" class="smoothScroll">Accueil</a></li>
                          <li><a href="index.php" class="smoothScroll">Sur SPharma</a></li>
-                         <li><a href="listemedicam.php" class="smoothScroll">Medicament</a></li> 
-                         <li><a href="laboratoire.php" class="smoothScroll">Liste des analyse</a></li>
+                         <li><a href="medicament.php" class="smoothScroll">Medicament</a></li>
+                         <li><a href="laboratoire.php" class="smoothScroll">Liste des analyses</a></li>
                          <li><a href="index.php" class="smoothScroll">Médecins</a></li>
-                         <li><a href="index.php" class="smoothScroll">Laboratoire</a></li>
+                         <li><a href="index.php" class="smoothScroll">Laboratoires</a></li>
+                         <li><a href="postannonce.php" class="smoothScroll">Annonce</a></li>
                          <li><a href="#google-map" class="smoothScroll">Contact</a></li> 
                          <li class="nav-item dropdown">
                               <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Profile</a>
@@ -124,36 +125,36 @@
                                         <input type="text" class="form-control" id="name" name="nom" placeholder="Nom">
                                    </div>
                                    <div class="col-md-6 col-sm-6">
-                                        <label for="name">Prenom</label>
+                                        <label for="name">Prénom</label>
                                         <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Prénom">
                                    </div>
 
                                    <div class="col-md-12 col-sm-12">
-                                        <label for="email">Email</label>
+                                        <label for="email">e-mail</label>
                                         <input type="email" class="form-control" id="email" name="email" placeholder="Votre Email">
                                    </div>
 
                                    <div class="col-md-6 col-sm-6">
-                                        <label for="date">Date de Naissance</label>
+                                        <label for="date">Date de naissance</label>
                                         <input type="date" name="dateN" value="" class="form-control">
                                    </div>
 
                                    <div class="col-md-6 col-sm-6">
-                                        <label for="select">Séléctionner votre Spécialité</label>
+                                        <label for="select">Spécialité</label>
                                         <select class="form-control" name="specialiste">
-                                             <option value="">Choisi votre spécialité </option>
+                                             <option value="">Choisir votre spécialité </option>
                                              <option value="infirmier">Infirmier </option>
-                                             <option value="Vendeur Pharmacie">Vendeur (se) Pharmacie</option>
-                                             <option value="Docteur D'analyse">Docteur D'analyse</option>
+                                             <option value="Vendeur Pharmacie">Vendeur (se) en Pharmacie</option>
+                                             <option value="Docteur D'analyse"> Médecin de laboratoire</option>
                                         </select>
                                    </div>
 
                                    <div class="col-md-12 col-sm-12">
-                                        <label for="telephone">Némuro Téléphone</label>
+                                        <label for="telephone">Numéro téléphone</label>
                                         <input type="tel" class="form-control" id="phone" name="phone" placeholder="Némuro De Téléphone ">
                                        <!-- <label for="Message">Commentaire : </label>
                                          <textarea class="form-control" rows="5" id="message" name="message" placeholder="Message"></textarea>-->
-                                        <button type="submit" class="form-control" id="cf-submit" name="valid">Valaide</button>
+                                        <button type="submit" class="form-control" id="cf-submit" name="valid">Postuler</button>
                                    </div>
                               </div>
                         </form>

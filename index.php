@@ -71,14 +71,14 @@
                <!-- MENU LINKS -->
                <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                         <li><a href="#top" class="smoothScroll">Accueil</a></li>
-                         <li><a href="#about" class="smoothScroll">Sur SPharma</a></li>
+                         <li><a href="index.php" class="smoothScroll">Accueil</a></li>
+                         <li><a href="index.php" class="smoothScroll">Sur SPharma</a></li>
                          <li><a href="medicament.php" class="smoothScroll">Medicament</a></li>
-                         <li><a href="laboratoire.php" class="smoothScroll">Liste des analyse</a></li>
+                         <li><a href="laboratoire.php" class="smoothScroll">Liste des analyses</a></li>
                          <li><a href="#team" class="smoothScroll">Médecins</a></li>
-                         <li><a href="#team1" class="smoothScroll">Laboratoire</a></li>
+                         <li><a href="#team1" class="smoothScroll">Laboratoires</a></li>
                          <li><a href="postannonce.php" class="smoothScroll">Annonce</a></li>
-                         <li><a href="#footer" class="smoothScroll">Contact</a></li>
+                         <li><a href="#google-map" class="smoothScroll">Contact</a></li>
                          <!-- <li class="appointment-btn"><a href="#appointment">Demande Travail</a></li> -->
                          <li class="appointment-btn1"><a href="compte.php">S'identifier</a></li>
 
@@ -136,8 +136,9 @@
                          <div class="about-info">
                               <h2 class="wow fadeInUp" data-wow-delay="0.6s"> Bienvenue Dans Votre <b>S</b>anté Pharma </h2>
                               <div class="wow fadeInUp" data-wow-delay="0.8s">
-                                   <p>Est un site web permettant de rechercher, localiser et consulter les différents services et produits.</p>
-                                   <p>des établissements médicaux et essenciellement ceux des pharmacies à proximité de votre position.</p>
+                                   <p>Est un site web permettant de rechercher, localiser et consulter les différents services et produits
+                                  des établissements médicaux</p>
+                                  <p>et essenciellement ceux des pharmacies à proximité de votre emplacement.</p>
                               </div>
                               <!--<figure class="profile wow fadeInUp" data-wow-delay="1s">
                                    <img src="images/author-image.jpg" class="img-responsive" alt="">
@@ -267,7 +268,7 @@
                                 
                <div class="col-md-6 col-sm-6">
                          <div class="about-info">
-                              <h2 class="wow fadeInUp" data-wow-delay="0.1s">Côté Analyse</h2>
+                              <h2 class="wow fadeInUp" data-wow-delay="0.1s">Laboratoires d'analyses</h2>
                          </div>
                     </div>
 
@@ -356,7 +357,7 @@
 
                          </div>
                     </div>
-                    <a href="medLabo.php"><button type="button" class="btn btn-primary2 btn-lg btn-block" style="margin-top: 15px;">Afficher La Liste Des Médecins de Laboratoire</button>
+                    <a href="medLabo.php"><button type="button" class="btn btn-primary2 btn-lg btn-block" style="margin-top: 15px;">Afficher la liste des médecins de laboratoires</button>
                    <!-- <a href="#" class="section-btn1 btn btn-default smoothScroll">Recherche</a> -->
                </div>
           </div>
@@ -374,21 +375,21 @@
                               <p>Un probléme est servenu ? vous voulez plus de renseignements ? Contactez nous sur l'adresse ou le numéro   suivants : </p>
 
                               <div class="contact-info">
-                                   <p><i class="fa fa-phone"></i> +213-555-555-555</p>
-                                   <p><i class="fa fa-envelope-o"></i> <a href="#">Exemple@gmail.com</a></p>
+                                   <p><i class="fa fa-phone"></i> +213-553-009-327</p>
+                                   <p><i class="fa fa-envelope-o"></i> <a href="#">serirna@gmail.com</a></p>
                               </div>
                          </div>
                     </div>
 
                     <div class="col-md-4 col-sm-4"> 
                          <div class="footer-thumb"> 
-                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Latest News</h4>
+                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Dernières téchnologies</h4>
                               <div class="latest-stories">
                                    <div class="stories-image">
                                         <a href="#"><img src="images/news-image.jpg" class="img-responsive" alt=""></a>
                                    </div>
                                    <div class="stories-info">
-                                        <a href="#"><h5>Amazing Technology</h5></a>
+                                        <a href="#"><h5>D'Impréssionnantes téchnologies</h5></a>
                                         <span>March 08, 2018</span>
                                    </div>
                               </div>
@@ -398,7 +399,7 @@
                                         <a href="#"><img src="images/news-image.jpg" class="img-responsive" alt=""></a>
                                    </div>
                                    <div class="stories-info">
-                                        <a href="#"><h5>New Healing Process</h5></a>
+                                        <a href="#"><h5>Nouvelles procédures de soins</h5></a>
                                         <span>February 20, 2018</span>
                                    </div>
                               </div>
@@ -408,10 +409,9 @@
                     <div class="col-md-4 col-sm-4"> 
                          <div class="footer-thumb">
                               <div class="opening-hours">
-                                   <h4 class="wow fadeInUp" data-wow-delay="0.4s">Opening Hours</h4>
-                                   <p>Monday - Friday <span>06:00 AM - 10:00 PM</span></p>
-                                   <p>Saturday <span>09:00 AM - 08:00 PM</span></p>
-                                   <p>Sunday <span>Closed</span></p>
+                                   <h4 class="wow fadeInUp" data-wow-delay="0.4s">Horaires</h4>
+                                   <p>Santé Pharma est un site web qui met ses services à votre disposition 24h/24 , 7 jours sur 7.</span></p>
+                                
                               </div> 
 
                               <ul class="social-icon">
@@ -430,10 +430,10 @@
                          </div>
                          <div class="col-md-6 col-sm-6">
                               <div class="footer-link"> 
-                                   <a href="#top">Recherche</a>
-                                   <a href="#team">Médecins</a>
-                                   <a href="#team1">Laboratoire</a>
-                                   <a href="#appointment">Demande Travail</a>
+                                   <a href="index.php">Recherche</a>
+                                   <a href="index.php">Médecins</a>
+                                   <a href="index.php">Laboratoire</a>
+                                   <a href="index.php">Demande Travail</a>
                               </div>
                          </div>
                          <div class="col-md-2 col-sm-2 text-align-center">

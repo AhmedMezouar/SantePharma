@@ -52,11 +52,12 @@
                     <ul class="nav navbar-nav navbar-right">
                          <li><a href="index.php" class="smoothScroll">Accueil</a></li>
                          <li><a href="index.php" class="smoothScroll">Sur SPharma</a></li>
-                         <li><a href="listemedicam.php" class="smoothScroll">Medicament</a></li>
-                         <li><a href="laboratoire.php" class="smoothScroll">Liste des analyse</a></li>
-                         <li><a href="medecin.php" class="smoothScroll">Médecins</a></li>
-                         <li><a href="#team1" class="smoothScroll">Laboratoire</a></li>
-                         <li><a href="#footer" class="smoothScroll">Contact</a></li>
+                         <li><a href="medicament.php" class="smoothScroll">Medicament</a></li>
+                         <li><a href="laboratoire.php" class="smoothScroll">Liste des analyses</a></li>
+                         <li><a href="index.php" class="smoothScroll">Médecins</a></li>
+                         <li><a href="index.php" class="smoothScroll">Laboratoires</a></li>
+                         <li><a href="postannonce.php" class="smoothScroll">Annonce</a></li>
+                         <li><a href="#google-map" class="smoothScroll">Contact</a></li>
                          <!-- <li class="appointment-btn"><a href="#appointment">Demande Travail</a></li> -->
                          <li class="appointment-btn1"><a href="compte.php">S'identifier</a></li>
 

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-     <title>Gérer Profile</title>
+     <title>Gérer Profil</title>
 
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -76,10 +76,11 @@
                     <ul class="nav navbar-nav navbar-right">
                          <li><a href="index.php" class="smoothScroll">Accueil</a></li>
                          <li><a href="index.php" class="smoothScroll">Sur SPharma</a></li>
-                         <li><a href="listemedicam.php" class="smoothScroll">Medicament</a></li>
-                         <li><a href="laboratoire.php" class="smoothScroll">Liste des analyse</a></li>
+                         <li><a href="medicament.php" class="smoothScroll">Medicament</a></li>
+                         <li><a href="laboratoire.php" class="smoothScroll">Liste des analyses</a></li>
                          <li><a href="index.php" class="smoothScroll">Médecins</a></li>
-                         <li><a href="index.php" class="smoothScroll">Laboratoire</a></li>
+                         <li><a href="index.php" class="smoothScroll">Laboratoires</a></li>
+                         <li><a href="postannonce.php" class="smoothScroll">Annonce</a></li>
                          <li><a href="#google-map" class="smoothScroll">Contact</a></li>
                          <li class="nav-item dropdown">
                               <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Profile</a>
@@ -114,20 +115,20 @@
                                    </div>
 
                                    <div class="col-md-6 col-sm-6" style="padding-bottom:10px;">
-                                        <label for="email">Email</label>
+                                        <label for="email">e-mail</label>
                                         <input type="email" class="form-control" id="email" name="email" placeholder="Votre Email">
                                    </div>
                                    <div class="col-md-6 col-sm-6" style="padding-bottom:10px;">
-                                        <label for="name">Mot de Passe </label>
+                                        <label for="name">Mot de passe </label>
                                         <input type="password" class="form-control" id="name" name="password" placeholder="Mot de Passe">
                                    </div>
                                    <div class="col-md-6 col-sm-6" style="padding-bottom:10px;">
-                                        <label for="date">Date de Naissance</label>
+                                        <label for="date">Date de naissance</label>
                                         <input type="date" name="date" value="" class="form-control">
                                    </div>
 
                                    <div class="col-md-6 col-sm-6" style="padding-bottom:10px;">
-                                        <label for="select">Spécialité (Medecin) </label>
+                                        <label for="select">Spécialité (Case résrvée aux médecins) </label>
                                         <input type="text" class="form-control" id="specialite" name="specialite" placeholder="specialité pour les medecin">
                                    </div>
 
@@ -151,7 +152,7 @@
                                         </select>
                                    </div>
                                    <div class="form-group col-md-6" style="padding-bottom:10px;">
-                                        <label for="inputState">Ouvre à :</label>
+                                        <label for="inputState">Horaire d'ouverture :</label>
                                         <select id="inputState" class="form-control" name="HOV">
                                           <option selected>Heure de Ouverture</option>
                                           <option value="01:00">01:00</option>
@@ -182,7 +183,7 @@
                                       </div>
 
                                       <div class="form-group col-md-6" style="padding-bottom:10px;">
-                                        <label for="inputState">Fermé à :</label>
+                                        <label for="inputState">Horaire de fermeture :</label>
                                         <select id="inputState" class="form-control" name="HOF">
                                           <option selected>Heure de Fermeture</option>
                                           <option value="01:00">01:00</option>
@@ -213,16 +214,16 @@
                                       </div>
                                    
                                    <div class="col-md-12 col-sm-12" style="padding-bottom:10px;">
-                                        <label for="telephone">Némuro D'agrément</label>
+                                        <label for="telephone">Numéro d'agrément</label>
                                         <input type="tel" class="form-control" id="phone" name="numAgre" placeholder="Numéro d'agrément">
                                    </div>
                                    <div class="col-md-12 col-sm-12" style="padding-bottom:10px;">
-                                        <label for="telephone">Némuro Téléphone</label>
+                                        <label for="telephone">Numéro téléphone</label>
                                         <input type="tel" class="form-control" id="phone" name="numTel" placeholder="Némuro De Téléphone ">
                                    </div> 
                                    <div class="col-md-12 col-sm-12">
                                    </div> 
-                                   <button type="submit" class="btn btn-primary" name="register_btn" value="Register" style="margin-left:14px; width:25%;float:right;">Enregistrer</button>
+                                   <button type="submit" class="btn btn-primary" name="register_btn" value="Register" style="margin-left:14px; width:25%;float:right;">S'identifier</button>
 				</div>
 				</form>
     </section>
@@ -244,21 +245,21 @@
                               <p>Un probléme est servenu ? vous voulez plus de renseignements ? Contactez nous sur l'adresse ou le numéro   suivants : </p>
 
                               <div class="contact-info">
-                                   <p><i class="fa fa-phone"></i> +213-555-555-555</p>
-                                   <p><i class="fa fa-envelope-o"></i> <a href="#">Exemple@gmail.com</a></p>
+                                   <p><i class="fa fa-phone"></i> +213-553-009-327</p>
+                                   <p><i class="fa fa-envelope-o"></i> <a href="#">serirna@gmail.com</a></p>
                               </div>
                          </div>
                     </div>
 
                     <div class="col-md-4 col-sm-4"> 
                          <div class="footer-thumb"> 
-                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Latest News</h4>
+                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Dernières téchnologies</h4>
                               <div class="latest-stories">
                                    <div class="stories-image">
                                         <a href="#"><img src="images/news-image.jpg" class="img-responsive" alt=""></a>
                                    </div>
                                    <div class="stories-info">
-                                        <a href="#"><h5>Amazing Technology</h5></a>
+                                        <a href="#"><h5>D'Impréssionnantes téchnologies</h5></a>
                                         <span>March 08, 2018</span>
                                    </div>
                               </div>
@@ -268,7 +269,7 @@
                                         <a href="#"><img src="images/news-image.jpg" class="img-responsive" alt=""></a>
                                    </div>
                                    <div class="stories-info">
-                                        <a href="#"><h5>New Healing Process</h5></a>
+                                        <a href="#"><h5>Nouvelles procédures de soins</h5></a>
                                         <span>February 20, 2018</span>
                                    </div>
                               </div>
@@ -278,10 +279,9 @@
                     <div class="col-md-4 col-sm-4"> 
                          <div class="footer-thumb">
                               <div class="opening-hours">
-                                   <h4 class="wow fadeInUp" data-wow-delay="0.4s">Opening Hours</h4>
-                                   <p>Monday - Friday <span>06:00 AM - 10:00 PM</span></p>
-                                   <p>Saturday <span>09:00 AM - 08:00 PM</span></p>
-                                   <p>Sunday <span>Closed</span></p>
+                                   <h4 class="wow fadeInUp" data-wow-delay="0.4s">Horaires</h4>
+                                   <p>Santé Pharma est un site web qui met ses services à votre disposition 24h/24 , 7 jours sur 7.</span></p>
+                                
                               </div> 
 
                               <ul class="social-icon">

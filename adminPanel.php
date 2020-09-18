@@ -85,7 +85,7 @@
               <div class="col-sm-12">
               <div class="tab_def">
               <p>
-                    Côté D'administration
+                    Administration
                </p>
              </div> 
         </div>
