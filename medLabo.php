@@ -44,7 +44,7 @@
                     </button>
 
                     <!-- lOGO TEXT HERE -->
-                    <a href="index.php" class="navbar-brand"><b>S</b>anté Pharma</a>
+                    <a href="index.php" class="navbar-brand"><b  style="color: #ce2f2f;">S</b>anté Pharma</a>
                </div>
 
                <!-- MENU LINKS -->
@@ -55,10 +55,10 @@
                          <li><a href="listemedicam.php" class="smoothScroll">Medicament</a></li>
                          <li><a href="laboratoire.php" class="smoothScroll">Liste des analyse</a></li>
                          <li><a href="medecin.php" class="smoothScroll">Médecins</a></li>
-                         <li><a href="index.php" class="smoothScroll">Laboratoire</a></li>
+                         <li><a href="medLabo.php" class="smoothScroll">Laboratoire</a></li>
                          <li><a href="#footer" class="smoothScroll">Contact</a></li>
                          <!-- <li class="appointment-btn"><a href="#appointment">Demande Travail</a></li> -->
-                         <li class="appointment-btn1"><a href="compte.php">S'identifier</a></li>
+                         <li class="appointment-btn1"><a href="compte.php" style="background:#ce2f2f; color:white;">S'identifier</a></li>
 
                     </ul>
                </div>
@@ -72,11 +72,14 @@
     padding-bottom: 150px;">
           <div class="container">
                <div class="row">
-               
-
+               <form action="rechanaly.php" method="post">
+                    <input name="search" class="form-control form-control-lg" type="text" placeholder="Rechercher un Medicament" style="padding: 23px; ">
+                    <button type="submit" class="section-btn btn btn-default smoothScroll" style="margin-left: 550px; background:#ce2f2f;"> Recherche </button>
+               </form>
+                                            
                     <div class="col-md-6 col-sm-6">
                          <div class="about-info" style="margin:auto;">
-                              <h2 class="wow fadeInUp" data-wow-delay="0.6s"  style="color:white; "><b>S</b>anté Pharma "Analyses"</h2>
+                              <h2 class="wow fadeInUp" data-wow-delay="0.6s"  style="color:white; "><b style="color: #ce2f2f;">S</b>anté Pharma "Analyses"</h2>
                               <div class="wow fadeInUp" data-wow-delay="0.8s">
                                    <p style="color:white;">Un laboratoire de biologie médicale (abrégé en LBM), ou, anciennement, laboratoire d'analyses médicales (LAM), est un lieu où sont prélevés et analysés divers fluides biologiques d'origine humaine sous la responsabilité des biologistes médicaux, qui en interprètent les résultats dans le but de participer au diagnostic et au suivi de certaines maladies. 
                                    Besoin urgent de trouver les LBM à proximité ? </p>
@@ -101,19 +104,26 @@
                     <thead style="background:#ce2f2f; color:white; vertical-align: middle;">
                     <tr>
                          <th scope="col">#</th>
-                         <th scope="col">NOM D'ANALYSE</th>
+                         <th scope="col">NOM</th>
+                         <th scope="col">PRENOM</th>
+                         <th scope="col">ADRESSE</th>
+                         <th scope="col">WILAYA</th>
+                         <th scope="col">HEURE D'OVERTURE</th>
+                         <th scope="col">HEURE DE FERMETURE</th>
+                         <th scope="col">NUMERO DE TELEOHONE</th>
+                         <th scope="col">EMAIL</th>
                     </tr>
                     </thead>
                     <tbody>
-                         <?php
+                    <?php
           include("connexion3.php");
-          $query = "select * from examenbioch";
+          $query = "select * from laboratoire";
           $stat = $conn->query($query);
           $tab = $stat->fetchAll();
           foreach($tab as $ligne)
           {
                //echo "<tr><td>".$ligne ["id_U"]."</td></tr>";
-               echo "<tr><td>".$ligne ["ID"]."</td><td>".$ligne ["NOM_DE_ANALYSE"]."</td></tr>"; 
+               echo "<tr><td>".$ligne ["id_U"]."</td><td>".$ligne ["Nom"]."</td><td>".$ligne ["prenom"]."</td><td>".$ligne ["addres"]."</td><td>".$ligne ["wilaya"]."</td><td>".$ligne ["HOV"]."</td><td>".$ligne ["HOF"]."</td><td>".$ligne ["numTel"]."</td><td>".$ligne ["email"]."</td></tr>"; 
           }
         ?>
                    <!-- <tr>

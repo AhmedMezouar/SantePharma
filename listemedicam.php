@@ -76,16 +76,17 @@
                          <li><a href="index.php" class="smoothScroll">Accueil</a></li>
                          <li><a href="index.php" class="smoothScroll">Sur SPharma</a></li>
                          <li><a href="listemedicam.php" class="smoothScroll">Medicament</a></li>
+                         <li><a href="laboratoire.php" class="smoothScroll">Liste des analyse</a></li>
                          <li><a href="index.php" class="smoothScroll">Médecins</a></li>
                          <li><a href="index.php" class="smoothScroll">Laboratoire</a></li>
                          <li><a href="#google-map" class="smoothScroll">Contact</a></li> 
                          <li class="nav-item dropdown">
                               <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Profile</a>
                               <div class="dropdown-menu">
-                                   <a class="dropdown-item" href="#">Gérer Profile</a>
-                                   <a class="dropdown-item" href="#">Demande_travail</a>
+                                   <a class="dropdown-item" href="gererprofile.php">Gérer Profile</a>
+                                   <a class="dropdown-item" href="demandeTrav.php">Demande_travail</a>
                                    <div class="dropdown-divider"></div>
-                                   <a class="dropdown-item" href="#">Déconnexion</a>
+                                   <a class="dropdown-item" href="index.php">Déconnexion</a>
                               </div>
                          </li> <!--
                          <li class="nav-item dropdown">
@@ -182,7 +183,6 @@
           </button>
      </form>
      <footer>
-
        <div>
           <div>
                     <div class="col-md-12 col-sm-12 border-top">

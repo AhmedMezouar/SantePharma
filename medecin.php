@@ -53,6 +53,7 @@
                          <li><a href="index.php" class="smoothScroll">Accueil</a></li>
                          <li><a href="index.php" class="smoothScroll">Sur SPharma</a></li>
                          <li><a href="listemedicam.php" class="smoothScroll">Medicament</a></li>
+                         <li><a href="laboratoire.php" class="smoothScroll">Liste des analyse</a></li>
                          <li><a href="medecin.php" class="smoothScroll">Médecins</a></li>
                          <li><a href="#team1" class="smoothScroll">Laboratoire</a></li>
                          <li><a href="#footer" class="smoothScroll">Contact</a></li>
@@ -106,8 +107,8 @@
                          <th scope="col">SPECIALISTE</th>
                          <th scope="col">ADRESSE</th>
                          <th scope="col">WILAYA</th>
-                         <th scope="col">HEURE DEBUT DE TRAVAILLE</th>
-                         <th scope="col">HEURE FIN DE TRAVAILLE</th>
+                         <th scope="col">HEURE D'OVERTURE</th>
+                         <th scope="col">HEURE DE FERMETURE</th>
                          <th scope="col">NUMERO DE TELEOHONE</th>
                          <th scope="col">EMAIL</th>
                     </tr>

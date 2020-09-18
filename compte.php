@@ -76,7 +76,8 @@
                     <ul class="nav navbar-nav navbar-right">
                          <li><a href="index.php" class="smoothScroll">Accueil</a></li>
                          <li><a href="index.php" class="smoothScroll">Sur SPharma</a></li>
-                         <li><a href="listemedicam.php" class="smoothScroll">Medicament</a></li>
+                         <li><a href="medicament.php" class="smoothScroll">Medicament</a></li>
+                         <li><a href="laboratoire.php" class="smoothScroll">Liste des analyse</a></li>
                          <li><a href="index.php" class="smoothScroll">Médecins</a></li>
                          <li><a href="index.php" class="smoothScroll">Laboratoire</a></li>
                          <li><a href="#google-map" class="smoothScroll">Contact</a></li>
@@ -113,7 +114,7 @@
                 <?php
                     }
                 ?>
-                  <div class="form-group" method="post"  action="erreur.php">
+                  <div class="form-group" method="post"  action="process.php">
                     <label for="exampleInputEmail1"> Address Email</label>
                     <input type="email" class="form-control mb-3" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entre email" name=email >
                   </div>
@@ -159,6 +160,7 @@
                                         <select class="form-control" name="choix">
                                              <option value="Pharmacie">Pharmacie </option>
                                              <option value="Medecin">Médecin </option>
+                                             <option value="laboratoire">Laboratoire </option>
                                         </select>
                                    </div>
 

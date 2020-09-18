@@ -107,7 +107,7 @@
                          include("connexion3.php");
                          require_once('connexion3.php'); 
 
-                         $query = "SELECT * FROM user";
+                         $query = "SELECT * FROM user WHERE accept = '0' ";
                          $stat = $conn->query($query);
                          $tab = $stat->fetchAll();
                          foreach($tab as $ligne)

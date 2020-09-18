@@ -57,6 +57,7 @@
                          <li><a href="index.php" class="smoothScroll">Accueil</a></li>
                          <li><a href="index.php" class="smoothScroll">Sur SPharma</a></li>
                          <li><a href="listemedicam.php" class="smoothScroll">Medicament</a></li>
+                         <li><a href="laboratoire.php" class="smoothScroll">Liste des analyse</a></li>
                          <li><a href="index.php" class="smoothScroll">Médecins</a></li>
                          <li><a href="index.php" class="smoothScroll">Laboratoire</a></li>
                          <li><a href="#google-map" class="smoothScroll">Contact</a></li> 

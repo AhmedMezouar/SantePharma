@@ -20,6 +20,7 @@ if (isset($_POST['register_btn']))
 	$region=$_POST['region'];
 	$wilaya=$_POST['wilaya'];
 	$specialite=$_POST['specialite'];
+	$accept=$_POST['accept'];
      
 	//if($password != NULL) {
 	//create user

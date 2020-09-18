@@ -76,7 +76,8 @@
                     <ul class="nav navbar-nav navbar-right">
                          <li><a href="index.php" class="smoothScroll">Accueil</a></li>
                          <li><a href="index.php" class="smoothScroll">Sur SPharma</a></li>
-                         <li><a href="listemedicam.php" class="smoothScroll">Medicament</a></li>
+                         <li><a href="listemedicam.php" class="smoothScroll">Medicament</a></li> 
+                         <li><a href="laboratoire.php" class="smoothScroll">Liste des analyse</a></li>
                          <li><a href="index.php" class="smoothScroll">Médecins</a></li>
                          <li><a href="index.php" class="smoothScroll">Laboratoire</a></li>
                          <li><a href="#google-map" class="smoothScroll">Contact</a></li> 
@@ -124,10 +125,14 @@
                               <div class="wow fadeInUp" data-wow-delay="0.8s">
                                    <div class="col-md-6 col-sm-6">
                                         <label for="name">Nom</label>
-                                        <input type="text" class="form-control" id="name" name="nom" placeholder="Nom Prénom">
+                                        <input type="text" class="form-control" id="name" name="nom" placeholder="Nom">
+                                   </div>
+                                   <div class="col-md-6 col-sm-6">
+                                        <label for="name">Prenom</label>
+                                        <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Prénom">
                                    </div>
 
-                                   <div class="col-md-6 col-sm-6">
+                                   <div class="col-md-12 col-sm-12">
                                         <label for="email">Email</label>
                                         <input type="email" class="form-control" id="email" name="email" placeholder="Votre Email">
                                    </div>
@@ -140,9 +145,10 @@
                                    <div class="col-md-6 col-sm-6">
                                         <label for="select">Séléctionner votre Spécialité</label>
                                         <select class="form-control" name="specialiste">
-                                             <option value="deux">Les Deux </option>
+                                             <option value="">Choisi votre spécialité </option>
                                              <option value="infirmier">Infirmier </option>
-                                             <option value="veneur_Pharmacie">Vendeur (se) Pharmacie</option>
+                                             <option value="pharma">Vendeur (se) Pharmacie</option>
+                                             <option value="dAnalyse">Docteur D'analyse</option>
                                         </select>
                                    </div>
 

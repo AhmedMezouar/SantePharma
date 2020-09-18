@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-     <title>Medicament</title>
+     <title>laboratoire</title>
 
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -75,13 +75,19 @@
                     <ul class="nav navbar-nav navbar-right">
                          <li><a href="index.php" class="smoothScroll">Accueil</a></li>
                          <li><a href="index.php" class="smoothScroll">Sur SPharma</a></li>
-                         <li><a href="listemedicam.php" class="smoothScroll">Medicament</a></li>
-                         <li><a href="laboratoire.php" class="smoothScroll">Liste des analyse</a></li>
+                         <li><a href="medicament.php" class="smoothScroll">Medicament</a></li>
                          <li><a href="index.php" class="smoothScroll">Médecins</a></li>
                          <li><a href="index.php" class="smoothScroll">Laboratoire</a></li>
                          <li><a href="#google-map" class="smoothScroll">Contact</a></li> 
-                         <li class="appointment-btn1"><a href="compte.php">S'identifier</a></li>
- <!--
+                         <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Profile</a>
+                              <div class="dropdown-menu">
+                                   <a class="dropdown-item" href="gererprofile.php">Gérer Profile</a>
+                                   <a class="dropdown-item" href="demandeTrav.php">Demande_travail</a>
+                                   <div class="dropdown-divider"></div>
+                                   <a class="dropdown-item" href="index.php">Déconnexion</a>
+                              </div>
+                         </li> <!--
                          <li class="nav-item dropdown">
                               <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
                                    <div class="btn-group" role="group">
@@ -107,38 +113,71 @@
      </section> 
      <div class="tab_def">
           <p>
-               Dans ce tableau se trouvent les différents médicaments produits en Algérie, <br>
-               Veuillez cocher les produits disponibles dans votre pharmacie.
-          </p>
+               Dans ce tableau se trouvent les différents médicaments produits en Algérie. <br></p>
      </div>
-     
-     <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">NOM_DE_MARQUE</th>
-              <th scope="col">DENOMINATION_COMMUNE_INTERNATIONALE</th>
-              <th scope="col">DOSAGE</th>
-              <th scope="col">PAYS_DU_LABORATOIRE</th>
-            </tr>
-          </thead>
-          <tbody>
-          <?php
-               include("connexion3.php");
-               $query = "select * from medicament";
-               $stat = $conn->query($query);
-               $tab = $stat->fetchAll();
-               foreach($tab as $ligne)
-               {
-                    echo "<tr><td>".$ligne ["ID"]."</td><td>".$ligne ["DENOMINATION_COMMUNE_INTERNATIONALE"]."</td><td>".$ligne ["NOM_DE_MARQUE"]."</td><td>".$ligne ["DOSAGE"]."</td><td>".$ligne ["PAYS_DU_LABORATOIRE_DETENTEUR_DE_LA_DECISION_DENREGISTREMENT"]."</td></tr>";  
-               }
-          ?>   
-
-          </tbody>
-        </table>
-
+     <form action="disponibilite_analyse.php" method="post">
+          <table class="table table-hover">
+               <thead style="background-color: #98ffdda2;">
+               <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">NOM DE L'ANALYSE</th>
+                    <th scope="col">DISPONIBILITE</th>
+               </thead>
+               <tbody>
+               <?php
+                    include("connexion3.php");
+                    $query = "select * from laboratoire";
+                    $stat = $conn->query($query);
+                    $tab = $stat->fetchAll();
+                    echo "<label for='cars' style='font-weight:bold; font-size:20px; width:70%; text-align:center; margin:auto; padding:15px;'>Choisissez votre laboratoire</label>";
+                    echo "<select name='id_U'>";
+                    foreach($tab as $ligne)
+                    {
+                         echo "<option value='".$ligne ["id_U"]."'>".$ligne ["Nom"] ." " . $ligne ["prenom"] ."</option>";  
+                    }
+                    echo "</select>";
+                    $query = "select * from examenbioch";
+                    $stat = $conn->query($query);
+                    $tab = $stat->fetchAll();
+                    foreach($tab as $ligne)
+                    {
+                         echo "<tr><td>".$ligne ["ID"]."</td><td>".$ligne ["NOM_DE_ANALYSE"]."</td><td><input type='checkbox' id=".$ligne ["ID"]." name='analyseDisponible[]' value='".$ligne ["ID"]."' aria-label='...'</td></tr>";  
+                    }
+               ?>
+               <!-- <tr>
+                    <th scope="row">1</th>
+                    <td>LORATADINE</td>
+                    <td>GELARTINE</td>
+                    <td>10MG</td>
+                    <td>B/30</td>
+                    <td>ALGERIE</td>
+                    <td>36 MOIS</td>
+               </tr>
+               <tr>
+                    <th scope="row">2</th>
+                    <td>LORATADINE</td>
+                    <td>GELARTINE</td>
+                    <td>10MG</td>
+                    <td>B/30</td>
+                    <td>ALGERIE</td>
+                    <td>36 MOIS</td>
+               </tr>
+               <tr>
+                    <th scope="row">3</th>
+                    <td>LORATADINE</td>
+                    <td>GELARTINE</td>
+                    <td>10MG</td>
+                    <td>B/30</td>
+                    <td>ALGERIE</td>
+                    <td>36 MOIS</td>
+               </tr> -->
+               </tbody>
+          </table>
+          <button type="submit" class="btn btn-primary">
+               Sauvegarder
+          </button>
+     </form>
      <footer>
-
        <div>
           <div>
                     <div class="col-md-12 col-sm-12 border-top">
